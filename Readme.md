@@ -1,11 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Юлия Толстых](https://up.htmlacademy.ru/adaptive/12/user/416431).
-<<<<<<< HEAD
 * Наставник: [Филипп Шамсиев] (https://up.htmlacademy.ru/adaptive/12/user/70260).
-=======
-* Наставник:  [Филипп Шамсиев] (https://up.htmlacademy.ru/adaptive/12/user/70260).
->>>>>>> Back
 
 ---
 
