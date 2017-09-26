@@ -5,136 +5,175 @@
     <title>ПИНК</title>
   </head>
   <body>
-    <header class="">
-      <ul class="">
-        <li>PINK
-        </li>
-        <li>
-          <button class="__toggle" type="button">X Окрыть меню
-          </button>
-        </li>
-      </ul>
-      <nav class="">
-        <ul class="">
-          <li class="">
-            <a>Главная</a>
+    <header class="page-header">
+      <nav class="main-nav">
+        <ul class="main-nav__list dropdown-list">
+          <li class="dropdown-list__item">
+            PINK
           </li>
-          <li class="">
-            <a href="#">Фотографии</a>
-          </li>
-          <li class="">
-            <a href="#">Конкурс</a>
-          </li>
-          <li class="">
-            <a href="#">HTML Academy</a>
+          <li class="dropdown-list__item">
+            <button class="main-nav__toggle" type="button">X Окрыть меню
+            </button>
           </li>
         </ul>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main class="page-main">
-
       <h1 class="visually-hidden">Взгляните на жизнь иначе!</h1>
-      <section class="">
+      <section class="software">
         <h2 class="visually-hidden">Выбор версии</h1>
-        <a class="button" type="button">Скачать приложение
-        </a>
-        <ul>
-          <li class="">
+        <a class="software__link button">Скачать приложение</a>
+        <ul class="software__list">
+          <li class="software__item software__item--apple">
             <a><img src="http://placehold.it/50x50"></a>
           </li>
-          <li class="">
+          <li class="software__item software__item--android">
             <a><img src="http://placehold.it/50x50"></a>
           </li>
-          <li class="">
+          <li class="software__item software__item--windows">
             <a><img src="http://placehold.it/50x50"></a>
           </li>
         </ul>
-        <p class="">
+        <p class="software__text">
           Доступна для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
         </p>
       </section>
-      <section class="">
+      <section class="info">
         <h2 class="visually-hidden">Информация</h1>
-        <p class="">
+        <p class="info__text">
           Устали от серости мегаполиса&#63;
         </p>
-        <p class="">
+        <p class="info__text">
           Нам есть, что вам предложить&#33;
         </p>
-        <div class="">
+        <div class="info__wrapper">
           <h3 class="visually-hidden">Характеристики приложения</h3>
-          <b class="">
+          <b class="info__slogan">
             Поднимает настроение
           </b>
-          <p class="">
+          <p class="info__sentence">
             Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов&#33;
           </p>
-          <b class="">
+          <b class="info__slogan">
             Меняет мир вокруг
           </b>
-          <p class="">
+          <p class="info__sentence">
             Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект.
           </p>
-          <b class="">
+          <b class="info__slogan">
             Заводит новых друзей
           </b>
-          <p class="">
+          <p class="info__sentence">
             Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых.
           </p>
         </div>
       </section>
-      <section class="">
-        <h2 class="visually-hidden">Отзывы</h1>
-        <b class="">
-          Николай Петров
-        </b>
-        <p class="">
-          &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи&#33; А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии&#33;&#187;
-        </p>
-        <div class="box-flag">
-          &#9675;&#183;&#183;
+      <section class="review">
+        <div class="review__wrapper slider">
+          <h2 class="visually-hidden">Отзывы</h1>
+          <div class="review__list  slider__list">
+            <blockquote class="review__item  slider__item">
+              <b class="review__author">
+                Николай Петров
+              </b>
+              <p class="review__text">
+                &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи&#33; А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии&#33;&#187;
+              </p>
+            </blockquote>
+            <blockquote class="review__item  slider__item">
+              <b class="review__author">
+                Николай Петров
+              </b>
+              <p class="review__text">
+                &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи&#33; А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии&#33;&#187;
+              </p>
+            </blockquote>
+            <blockquote class="review__item  slider__item">
+              <b class="review__author">
+                Николай Петров
+              </b>
+              <p class="review__text">
+                &#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи&#33; А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии&#33;&#187;
+              </p>
+            </blockquote>
+          </div>
+          <p class="review__toggles slider__toggles">
+              <button class="slider__toggle" type="button">1</button>
+              <button class="slider__toggle" type="button">2</button>
+              <button class="slider__toggle" type="button">3</button>
+          </p>
         </div>
       </section>
-      <section class="">
-        <h2 class="visually-hidden">Тарифы</h1>
-        <div class="">
-          <ul>
-            <li>Стандарт</li>
-            <li>3,99 USD</li>
-          </ul>
-        </div>
-        <ul class="">
-          <li>Розовый фильтр</li>
-          <li>Смайлики</li>
-          <li>Комментарииы</li>
-        </ul>
-        <div class="box-flag">
-          &#9675;&#183;&#183;
+      <section class="tariff">
+        <div class="tariff__wrapper slider">
+          <h2 class="visually-hidden">Тарифы</h1>
+          <div class="tariff__part  slider__list">
+            <ul class="tariff__list slider__item">
+              <li class="tariff__item tariff__item--title">База<br>1,99 USD</li>
+              <li class="tariff__item tariff__item--yes">Розовый фильтр</li>
+              <li class="tariff__item tariff__item--no">Смайлики</li>
+              <li class="tariff__item tariff__item--no">Комментарииы</li>
+            </ul>
+            <ul class="tariff__list slider__item">
+              <li class="tariff__item tariff__item--title">Стандарт<br>3,99 USD</li>
+              <li class="tariff__item tariff__item--yes">Розовый фильтр</li>
+              <li class="tariff__item tariff__item--yes">Смайлики</li>
+              <li class="tariff__item tariff__item--no">Комментарииы</li>
+            </ul>
+            <ul class="tariff__list slider__item">
+              <li class="tariff__item tariff__item--title">Анлим<br>9,99 USD</li>
+              <li class="tariff__item tariff__item--yes">Розовый фильтр</li>
+              <li class="tariff__item tariff__item--yes">Смайлики</li>
+              <li class="tariff__item tariff__item--yes">Комментарииы</li>
+            </ul>
+          </div>
+          <p class="tariff__toggles slider__toggles">
+              <button class="slider__toggle" type="button">1</button>
+              <button class="slider__toggle" type="button">2</button>
+              <button class="slider__toggle" type="button">3</button>
+          </p>
         </div>
       </section>
     </main>
-
     <footer>
-      <section class="">
+      <section class="page-footer">
         <h2 class="visually-hidden">Контакты</h2>
-        <p>Остались вопросы&#63; Свяжитесь с нами&#33;</p>
-        <ul>
-          <li>
-            <h3>Звоните:</h3>
-            <p>+7(812)555-66-66</p>
-          </li>
-          <li>
-            <h3>Пишите:</h3>
-            <p>mail@htmlacademy.ru</p>
-          </li>
-          <li>
-            <h3>Приезжайте в гости:</h3>
-            <p>ул. Большая Конюшенная, 19&#47;8</p>
-          </li>
-        </ul>
+        <div class="page-footer__contacts contacts">
+          <p class="contacts__text">Остались вопросы&#63; Свяжитесь с нами&#33;</p>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__title">Звоните:</h3>
+              <p class="contacts__text contacts__text--color">+7(812)555-66-66</p>
+            </li>
+            <li class="">
+              <h3 class="contacts__title">Пишите:</h3>
+              <p class="contacts__text contacts__text--color">mail@htmlacademy.ru</p>
+            </li>
+            <li class="">
+              <h3 class="contacts__title">Приезжайте в гости:</h3>
+              <p class="contacts__text contacts__text--color">ул. Большая Конюшенная, 19&#47;8</p>
+            </li>
+          </ul>
+        </div>
       </section>
-      <div class="map js-map">
-        <img class="img-map" src="img/map.png" alt="Как добраться..." width="120" height="50">
+      <div class="page-footer__map js-map">
+        <img class="page-tooter__map-image" src="img/map.png" alt="Как добраться..." width="200" height="50">
       </div>
     </footer>
   </body>
