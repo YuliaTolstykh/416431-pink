@@ -34,57 +34,76 @@
     </header>
     <main class="page-main">
       <p class="page-main__text">Поделитесь своей историей и получите шанс выиграть ценный приз &#8211; 1000 миль на вашу бонусную карту!</p>
-      <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="name form__part">
-          <div class="name__item">
+      <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form">
+          <div class="form__item">
             <label class="form__title" for="surname">Фамилия:</label>
             <input class="form__text" type="text" id="surname" name="surname" value="Укажите фамилию*">
           </div>
-          <div class="name__item">
+          <div class="form__item">
             <label class="form__title" for="name">Имя:</label>
             <input class="form__text" type="text" id="name" name="name" value="Введите ваше имя*">
           </div>
-          <div class="name__item">
+          <div class="form__item">
             <label class="form__title" for="patronymic">Отчество:</label>
             <input class="form__text" type="text" id="patronymic" name="patronymic" value="Ну и отчество тоже">
+
+        </div>
+        </fieldset>
+        <fieldset class="form">
+          <legend class="form__headline">Ваши безбашенные достижения в путешестви</legend>
+          <div class="form__item">
+            <input class="form__text" type="checkbox" id="shark" name="shark" checked>
+            <label class="form__mark" for="shark"> Сделал селфи с акулой </label>
+          </div>
+          <div class="form__item">
+            <input class="form__text" type="checkbox" id="beach" name="beach" checked>
+            <label class="form__mark" for="beach"> Обгорел на пляже </label>
+          </div>
+          <div class="form__item">
+            <input class="form__text" type="checkbox" id="Norris" name="Norris">
+            <label class="form__mark" for="Norris"> Видел Чака Норриса </label>
+          </div>
+          <div class="form__item">
+            <input class="form__text" type="checkbox" id="souvenir" name="souvenir">
+            <label class="form__mark" for="souvenir"> Накупил сувениров </label>
+          </div>
+          <div class="form__item">
+            <input class="form__text" type="checkbox" id="tower" name="tower" checked>
+            <label class="form__mark" for="tower"> Удержал башню </label>
+          </div>
+          <div class="form__item">
+            <input class="form__text" type="checkbox" id="hotel" name="hotel">
+            <label class="form__mark" for="hotel"> Разгромил отель </label>
           </div>
         </fieldset>
-        <fieldset class="performance form__part">
-          <legend class="form__headline">Ваши безбашенные достижения в путешестви</legend>
-          <input class="form__text" type="checkbox" id="shark" name="shark" checked>
-          <label class="performance__mark" for="shark"> Сделал селфи с акулой </label>
-          <input class="form__text" type="checkbox" id="beach" name="beach" checked>
-          <label class="performance__mark" for="beach"> Обгорел на пляже </label>
-          <input class="form__text" type="checkbox" id="Norris" name="Norris">
-          <label class="performance__mark" for="Norris"> Видел Чака Норриса </label>
-          <input class="form__text" type="checkbox" id="souvenir" name="souvenir">
-          <label class="performance__mark" for="souvenir"> Накупил сувениров </label>
-          <input class="form__text" type="checkbox" id="tower" name="tower" checked>
-          <label class="performance__mark" for="tower"> Удержал башню </label>
-          <input class="form__text" type="checkbox" id="hotel" name="hotel">
-          <label class="performance__mark" for="hotel"> Разгромил отель </label>
-        </fieldset>
-        <fieldset class="connection form__part">
-          <div class="connection__item">
+        <fieldset class="form">
+          <div class="form__item">
             <label class="form__title" for="phone">Номер телефона</label>
             <input class="form__text" type="tel" id="phone" name="phone" value="Номер, пожалуйста">
           </div>
-          <div class="connection__item">
+          <div class="form__item">
             <label class="form__title" for="email">Адрес почты</label>
             <input class="form__text" type="email" id="email" name="email" value="Введите почту*">
           </div>
         </fieldset>
-        <fieldset class="os form__part">
+        <fieldset class="form">
           <legend class="form__headline">С каким проложением путешествовали?</legend>
-          <input class="form__text" type="radio" id="apple" name="soft" checked>
-          <label class="os__mark" for="apple"> Pink для iOS </label>
-          <input class="form__text" type="radio" id="android" name="soft">
-          <label class="os__mark" for="android"> Pink на Android </label>
-          <input class="form__text" type="radio" id="windows" name="soft">
-          <label class="os__mark" for="windows"> Windows Phone </label>
+          <div class="form__item">
+            <input class="form__text" type="radio" id="apple" name="soft" checked>
+            <label class="form__radio" for="apple"> Pink для iOS </label>
+          </div>
+          <div class="form__item">
+            <input class="form__text" type="radio" id="android" name="soft">
+            <label class="form__radio" for="android"> Pink на Android </label>
+          </div>
+          <div class="form__item">
+            <input class="form__text" type="radio" id="windows" name="soft">
+            <label class="form__radio" for="windows"> Windows Phone </label>
+          </div>
         </fieldset>
-        <fieldset class="description form__part">
-          <legend class="headline">Опишите свои эмоции</legend>
+        <fieldset class="form">
+          <legend class="form__headline">Опишите свои эмоции</legend>
           <textarea class="form__text">Можно прямо в красках, не стесняясь в выражениях"</textarea>
         </fieldset>
         <div class="submit">
