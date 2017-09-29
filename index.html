@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -8,22 +8,22 @@
     <header class="page-header">
       <nav class="main-nav">
         <div class="main-nav__item">
-          <span class="main-nav__logo">PINK</span>
+          <a class="main-nav__logo">PINK</a>
           <button class="main-nav__toggle" type="button">X Окрыть меню</button>
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__item site-list">
             <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
+              <a class="man-nav__link">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="inner-photo.html">Фотографии</a>
+              <a class="man-nav__link" href="inner-photo.html">Фотографии</a>
             </li>
             <li class="site-list__item">
-              <a href="inner-form.html">Конкурс</a>
+              <a class="man-nav__link" href="inner-form.html">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="#">HTML Academy</a>
+              <a class="man-nav__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -73,8 +73,8 @@
       <section class="review">
         <div class="review__wrapper slider">
           <h2 class="visually-hidden">Отзывы</h1>
-          <div class="review__list  slider__list">
-            <blockquote class="review__item  slider__item">
+          <div class="review__list slider__list">
+            <blockquote class="review__item slider__item">
               <cite class="review__author">Николай Петров</cite>
               <p class="review__text">&#171;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи&#33; А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии&#33;&#187;</p>
             </blockquote>
@@ -97,31 +97,25 @@
       <section class="tariff">
         <div class="tariff__wrapper slider">
           <h2 class="visually-hidden">Тарифы</h1>
-          <table class="tariff__part  slider__list">
+          <table class="tariff__part slider__list">
             <tr>
               <td class="tariff__column slider__item">
-                <ul class="tariff__list">
-                  <li class="tariff__item tariff__item--title">База<br>1,99 USD</li>
-                  <li class="tariff__item tariff__item--yes">Розовый фильтр</li>
-                  <li class="tariff__item tariff__item--no">Смайлики</li>
-                  <li class="tariff__item tariff__item--no">Комментарииы</li>
-                </ul>
+                <p class="tariff__item tariff__item--title">База<br>1,99 USD</p>
+                <p class="tariff__item tariff__item--yes">Розовый фильтр</p>
+                <p class="tariff__item tariff__item--no">Смайлики</p>
+                <p class="tariff__item tariff__item--no">Комментарииы</p>
               </td>
               <td class="tariff__column slider__item">
-                <ul class="tariff__list">
-                  <li class="tariff__item tariff__item--title">Стандарт<br>3,99 USD</li>
-                  <li class="tariff__item tariff__item--yes">Розовый фильтр</li>
-                  <li class="tariff__item tariff__item--yes">Смайлики</li>
-                  <li class="tariff__item tariff__item--no">Комментарииы</li>
-                </ul>
+                <p class="tariff__item tariff__item--title">Стандарт<br>3,99 USD</p>
+                <p class="tariff__item tariff__item--yes">Розовый фильтр</p>
+                <p class="tariff__item tariff__item--yes">Смайлики</p>
+                <p class="tariff__item tariff__item--no">Комментарииы</p>
               </td>
               <td class="tariff__column slider__item">
-                <ul class="tariff__list">
-                  <li class="tariff__item tariff__item--title">Анлим<br>9,99 USD</li>
-                  <li class="tariff__item tariff__item--yes">Розовый фильтр</li>
-                  <li class="tariff__item tariff__item--yes">Смайлики</li>
-                  <li class="tariff__item tariff__item--yes">Комментарииы</li>
-                </ul>
+                <p class="tariff__item tariff__item--title">Анлим<br>9,99 USD</p>
+                <p class="tariff__item tariff__item--yes">Розовый фильтр</p>
+                <p class="tariff__item tariff__item--yes">Смайлики</p>
+                <p class="tariff__item tariff__item--yes">Комментарииы</p>
               </td>
             </tr>
           </table>
@@ -132,22 +126,18 @@
           </p>
         </div>
       </section>
-      <section class="page-floor">
+      <section class="page-contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="page-floor__contacts contacts">
+        <div class="page-contacts__wrapper contacts">
           <p class="contacts__text">Остались вопросы&#63; Свяжитесь с нами&#33;</p>
           <ul class="contacts__list">
             <li class="contacts__item">
               <b class="contacts__title">Звоните:</b>
-              <a class="contacts__phone" href="tel:+78125556666">
-                <p class="contacts__text">+7(812)555-66-66</p>
-              </a>
+              <a class="contacts__phone" href="tel:+78125556666">+7(812)555-66-66</a>
             </li>
             <li class="contacts__item">
               <b class="contacts__title">Пишите:</b>
-              <a class="contacts__email" href="mailto:mail@htmlacademy.ru">
-                <p class="contacts__text">mail@htmlacademy.ru</p>
-              </a>
+              <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item">
               <b class="contacts__title">Приезжайте в гости:</b>
@@ -155,8 +145,8 @@
             </li>
           </ul>
         </div>
-        <div class="page-floor__map js-map">
-          <img class="page-tloor__map-image" src="img/map.png" alt="Как добраться..." width="200" height="50">
+        <div class="page-contacts__map js-map">
+          <img class="page-contacts__map-image" src="img/map.png" alt="Как добраться..." width="200" height="50">
         </div>
       </section>
     <main>

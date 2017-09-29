@@ -14,16 +14,16 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a href="index.html">Главная</a>
+              <a class="man-nav__link" href="index.html">Главная</a>
             </li>
             <li class="site-list__item">
-              <a href="inner-photo.html">Фотографии</a>
+              <a class="man-nav__link" href="inner-photo.html">Фотографии</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a>Конкурс</a>
+              <a class="man-nav__link">Конкурс</a>
             </li>
             <li class="site-list__item">
-              <a href="#">HTML Academy</a>
+              <a class="man-nav__link" href="#">HTML Academy</a>
             </li>
           </ul>
         </div>
@@ -34,17 +34,23 @@
     </header>
     <main class="page-main">
       <p class="page-main__text">Поделитесь своей историей и получите шанс выиграть ценный приз &#8211; 1000 миль на вашу бонусную карту!</p>
-      <form class="form">
-        <fieldset class="name">
-          <label class="form__title" for="surname">Фамилия:</label>
-          <input class="form__text" type="text" id="surname" name="surname" value="Укажите фамилию*">
-          <label class="form__title" for="name">Имя:</label>
-          <input class="form__text" type="text" id="name" name="name" value="Введите ваше имя*">
-          <label class="form__title" for="patronymic">Отчество:</label>
-          <input class="form__text" type="text" id="patronymic" name="patronymic" value="Ну и отчество тоже">
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="name form__part">
+          <div class="name__item">
+            <label class="form__title" for="surname">Фамилия:</label>
+            <input class="form__text" type="text" id="surname" name="surname" value="Укажите фамилию*">
+          </div>
+          <div class="name__item">
+            <label class="form__title" for="name">Имя:</label>
+            <input class="form__text" type="text" id="name" name="name" value="Введите ваше имя*">
+          </div>
+          <div class="name__item">
+            <label class="form__title" for="patronymic">Отчество:</label>
+            <input class="form__text" type="text" id="patronymic" name="patronymic" value="Ну и отчество тоже">
+          </div>
         </fieldset>
-        <fieldset class="performance">
-          <legend class="form__title form__title--center">Ваши безбашенные достижения в путешестви</legend>
+        <fieldset class="performance form__part">
+          <legend class="form__headline">Ваши безбашенные достижения в путешестви</legend>
           <input class="form__text" type="checkbox" id="shark" name="shark" checked>
           <label class="performance__mark" for="shark"> Сделал селфи с акулой </label>
           <input class="form__text" type="checkbox" id="beach" name="beach" checked>
@@ -58,14 +64,18 @@
           <input class="form__text" type="checkbox" id="hotel" name="hotel">
           <label class="performance__mark" for="hotel"> Разгромил отель </label>
         </fieldset>
-        <fieldset class="connection">
+        <fieldset class="connection form__part">
+          <div class="connection__item">
             <label class="form__title" for="phone">Номер телефона</label>
-            <input class="form__text" type="text" id="phone" name="phone" value="Номер, пожалуйста">
+            <input class="form__text" type="tel" id="phone" name="phone" value="Номер, пожалуйста">
+          </div>
+          <div class="connection__item">
             <label class="form__title" for="email">Адрес почты</label>
-            <input class="form__text" type="text" id="email" name="email" value="Введите почту*">
+            <input class="form__text" type="email" id="email" name="email" value="Введите почту*">
+          </div>
         </fieldset>
-        <fieldset class="os">
-          <legend class="form__title form__title--center">С каким проложением путешествовали?</legend>
+        <fieldset class="os form__part">
+          <legend class="form__headline">С каким проложением путешествовали?</legend>
           <input class="form__text" type="radio" id="apple" name="soft" checked>
           <label class="os__mark" for="apple"> Pink для iOS </label>
           <input class="form__text" type="radio" id="android" name="soft">
@@ -73,13 +83,13 @@
           <input class="form__text" type="radio" id="windows" name="soft">
           <label class="os__mark" for="windows"> Windows Phone </label>
         </fieldset>
-        <fieldset class="description">
-          <legend class="form__title form__title--center">Опишите свои эмоции</legend>
-            <textarea class="form__text">Можно прямо в красках, не стесняясь в выражениях"</textarea>
+        <fieldset class="description form__part">
+          <legend class="headline">Опишите свои эмоции</legend>
+          <textarea class="form__text">Можно прямо в красках, не стесняясь в выражениях"</textarea>
         </fieldset>
         <div class="submit">
-          <button class="submit__button button-square" type="button">Отправить форму</button>
-          <span class="page-main__footnote">* &#8211; обязательные поля</span>
+          <button class="submit__button button-square" type="submit">Отправить форму</button>
+          <span class="submit__footnote">* &#8211; обязательные поля</span>
         </div>
       </form>
       <div class="popup">
@@ -96,8 +106,9 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
-          <img class="page-footer__logo-image" src="img/logotype-mobile.svg" width="100" height="30" alt="Приложение Пинк"></a>
-          <div class="page-footer__social social">
+          <img class="page-footer__logo-image" src="img/logotype-mobile.svg" width="100" height="30" alt="Приложение Пинк">
+        </a>
+        <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
