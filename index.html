@@ -97,29 +97,53 @@
       <section class="tariff">
         <div class="tariff__wrapper slider">
           <h2 class="visually-hidden">Тарифы</h1>
-          <table class="tariff__part slider__list">
-            <tr>
-              <td class="tariff__column slider__item">
-                <p class="tariff__item tariff__item--title">База<br>1,99 USD</p>
-                <p class="tariff__item tariff__item--yes">Розовый фильтр</p>
-                <p class="tariff__item tariff__item--no">Смайлики</p>
-                <p class="tariff__item tariff__item--no">Комментарииы</p>
+          <table class="table">
+            <tr class="table__header-row">
+              <th class="table__header-cell">
+                <span>База<br>1,99 USD</span>
+              </th>
+              <th class="table__header-cell">
+                <span>Стандарт<br>3,99 USD</span>
+              </th class="table__header-cell">
+              <th>
+                <span>Анлим<br>9,99 USD</span>
+              </th>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">
+                <span class="table__item table__item--yes">Розовый фильтр</span>
               </td>
-              <td class="tariff__column slider__item">
-                <p class="tariff__item tariff__item--title">Стандарт<br>3,99 USD</p>
-                <p class="tariff__item tariff__item--yes">Розовый фильтр</p>
-                <p class="tariff__item tariff__item--yes">Смайлики</p>
-                <p class="tariff__item tariff__item--no">Комментарииы</p>
+              <td class="table__cell">
+                <span class="table__item table__item--yes">Розовый фильтр</span>
               </td>
-              <td class="tariff__column slider__item">
-                <p class="tariff__item tariff__item--title">Анлим<br>9,99 USD</p>
-                <p class="tariff__item tariff__item--yes">Розовый фильтр</p>
-                <p class="tariff__item tariff__item--yes">Смайлики</p>
-                <p class="tariff__item tariff__item--yes">Комментарииы</p>
+              <td class="table__cell">
+                <span class="table__item table__item--yes">Розовый фильтр</span>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">
+                <span class="table__item table__item--no">Смайлики</span>
+              </td>
+              <td class="table__cell">
+                <span class="table__item table__item--yes">Смайлики</span>
+              </td>
+              <td class="table__cell">
+                <span class="table__item table__item--yes">Смайлики</span>
+              </td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__cell">
+                <span class="table__item table__item--no">Комментарии</span>
+              </td>
+              <td class="table__cell">
+                <span class="table__item table__item--no">Комментарии</span>
+              </td>
+              <td class="table__cell">
+                <span class="table__item table__item--yes">Комментарии</span>
               </td>
             </tr>
           </table>
-          <p class="tariff__toggles slider__toggles">
+          <p class="table__toggles slider__toggles">
             <button class="slider__toggle" type="button">1</button>
             <button class="slider__toggle" type="button">2</button>
             <button class="slider__toggle" type="button">3</button>
@@ -133,11 +157,15 @@
           <ul class="contacts__list">
             <li class="contacts__item">
               <b class="contacts__title">Звоните:</b>
-              <a class="contacts__phone" href="tel:+78125556666">+7(812)555-66-66</a>
+              <p class="contacts__text">
+                <a class="contacts__phone" href="tel:+78125556666">+7(812)555-66-66</a>
+              </p>
             </li>
             <li class="contacts__item">
               <b class="contacts__title">Пишите:</b>
-              <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <p class="contacts__text">
+                <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </p>
             </li>
             <li class="contacts__item">
               <b class="contacts__title">Приезжайте в гости:</b>
