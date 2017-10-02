@@ -1,15 +1,15 @@
 .table {
   margin-bottom: 40px;
-  background: rgb(255, 255, 255);
+  background: @white;
 }
 
 .table__header-row {
-  background: rgb(40, 54, 69);
-  color: rgb(255, 255, 255);
+  color: @white;
+  background: @fontColor;
 }
 
 .table__header {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
@@ -28,8 +28,4 @@
 .table__item {
   font-size: 14px;
   line-height: 30px;
-}
-
-.table__toggles {
-  text-align: center;
 }

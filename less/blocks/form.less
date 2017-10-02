@@ -1,12 +1,13 @@
 .form {
   margin-top: 40px;
   padding: 0;
+
   border: 0;
   outline: solid 2px pink;
 }
 
 .form--background {
-  background-color: rgb(242, 242, 242);
+  background-color: @lightBackground;
 }
 
 .form__item {
@@ -15,45 +16,49 @@
 
 .form__title {
   margin-bottom: 20px;
+
   font-size: 14px;
   line-height: 30px;
-  color: rgb(210, 40, 86);
+  color: @darkPink;
 }
 
 .form__text {
   display: block;
   padding: 15px;
 
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   line-height: 30px;
-  color: rgb(40, 54, 69);
+  color: @fontColor;
+
   outline: solid 2px pink;
 }
 
 .form__text--area {
-  margin: auto;
-  margin-bottom: 40px;
   width: 276px;
   height: 197px;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
 .form__headline {
+  width: 100%;
+  box-sizing: border-box;
   padding-top: 30px;
   padding-left: 40px;
   padding-right: 40px;
-  box-sizing: border-box;
-  width: 100%;
 
   font-size: 14px;
   line-height: 18px;
   text-align: center;
-  color: rgb(210, 40, 86);
-  background: rgb(242, 242, 242);
+  color: @darkPink;
+
+  background: @lightBackground;
   outline: solid 2px lightblue;
 }
 
 .form__headline--background {
-  background: rgb(255, 255, 255);
   margin-bottom: 20px;
+
+  background: @white;
 }
