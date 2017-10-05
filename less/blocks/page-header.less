@@ -1,9 +1,10 @@
 .page-header {
+  position: relative;
   margin: auto;
 
   color: @white;
   background: @fontColor;
-  outline: solid 2px lightred;
+  outline: solid 2px red;
 }
 
 .page-header__bottom {
@@ -12,7 +13,7 @@
   display: block;
   width: 320px;
   height: 462px;
-  margin: 0;
+  margin: 0 auto;
 
   text-align: center;
 
@@ -22,12 +23,17 @@
   outline: solid 2px red;
 }
 
+.page-header__headline {
+  display: none;
+}
+
 .page-header__text {
   position: absolute;
   top: 80px;
-  left: 20px;
+  left: 50%;
 
   width: 280px;
+  margin-left: -140px;
 
   font-size: 24px;
   font-weight: lighter;
@@ -35,4 +41,38 @@
   color: @white;
 
   outline: solid 2px green;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__bottom {
+    width: 100%;
+  }
+
+  .page-header__headline {
+    display: block;
+    width: 120px;
+    margin: auto;
+    margin-bottom: 50px;
+
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 1.2;
+    text-align: center;
+    color: @white;
+    outline: solid 2px green;
+  }
+
+  .page-header__software {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__software {
+    width: 40%;
+  }
 }

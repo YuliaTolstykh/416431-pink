@@ -8,6 +8,19 @@
   outline: solid 2px magenta;
 }
 
+.software__list {
+  display: flex;
+  justify-content: center;
+
+  padding: 0;
+  list-style-type: none;
+  outline: solid 2px green;
+}
+
+.software__item {
+  margin: 20px;
+}
+
 .software__text {
   width: 280px;
   margin: auto;
@@ -24,4 +37,11 @@
 
   text-align: center;
   background: @lightBlack;
+}
+
+@media (min-width: @tablet-width) {
+  .software,
+  .software__link {
+    background-color: transparent;
+  }
 }
