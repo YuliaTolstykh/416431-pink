@@ -4,8 +4,6 @@
   line-height: 1.2;
   text-align: center;
   color: rgb(40, 54, 69);
-
-  outline: solid 2px olive;
 }
 
 .info__text {
@@ -35,6 +33,7 @@
 .info__slogan {
   font-size: 18px;
   line-height: 30px;
+  color: @black;
 }
 
 .info__sentence {
@@ -99,7 +98,6 @@
   }
 
   .info__slogan--big {
-    padding-right: 50%;
     font-size: 30px;
     line-height: 36px;
   }
@@ -107,5 +105,101 @@
   .info__link {
     color: @darkPink;
     text-decoration: underline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .info__wrapper {
+    margin: auto;
+    padding: auto;
+
+    background: none;
+  }
+
+  .info__text {
+    font-size: 50px;
+  }
+
+  .info__list {
+    display: flex;
+    justify-content: space-around;
+    // flex-shrink: 1;
+
+    padding: 0;
+    width: 100%;
+    background-color: @lightBackground;
+  }
+
+  .info__item {
+    padding-top: 310px;
+    flex-basis: 250px;
+    text-align: center;
+    background-color: @lightBackground;
+  }
+
+  .info__item:nth-child(1) {
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    // background-color: @lightBackground;
+  }
+
+  .info__item:nth-child(2) {
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    // background-color: @lightBackground;
+  }
+
+  .info__item:nth-child(3) {
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    // background-color: @lightBackground;
+  }
+
+  .info__slogan {
+    display: block;
+
+    margin-top: -50px;
+    padding-top: 60px;
+    font-size: 30px;
+    background-color: @lightBackground;
+  }
+
+  .info__sentence {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  .info__british {
+    margin-top: -50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 40%;
+    width: 60%;
+
+    text-align: left;
+    background-color: @white;
+  }
+
+  .info__sentence--british {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 70px;
+  }
+
+  .info__link {
+    font-size: 18px;
+  }
+
+  .info__slogan--big {
+    padding: 0;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .info__slogan--big br {
+    display: none;
   }
 }

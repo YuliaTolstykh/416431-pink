@@ -5,7 +5,6 @@
   color: @white;
 
   background: @lightBlack;
-  outline: solid 2px magenta;
 }
 
 .software__list {
@@ -14,7 +13,6 @@
 
   padding: 0;
   list-style-type: none;
-  outline: solid 2px green;
 }
 
 .software__item {
@@ -27,6 +25,7 @@
 
   font-size: 14px;
   line-height: 24px;
+  font-weight: lighter;
   text-align: center;
 }
 
@@ -43,5 +42,12 @@
   .software,
   .software__link {
     background-color: transparent;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .software__text {
+    width: 300px;
+    font-size: 18px;
   }
 }

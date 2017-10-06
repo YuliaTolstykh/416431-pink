@@ -1,8 +1,12 @@
 .review {
   margin: 0;
+  margin-top: -50px;
   padding: 0;
+  margin-top: -50px;
+  padding-top: 50px;
 
   text-align: center;
+  background-color: @white;
 }
 
 .review__item {
@@ -15,9 +19,11 @@
 }
 
 .review__author {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   font-style: normal;
+  line-height: 30px;
+  color: @black;
 }
 
 .review__personal {
@@ -27,7 +33,7 @@
 }
 
 .review__text {
-  font-size: 18px;
+  line-height: 30px;
 }
 
 @media (min-width: @tablet-width) {
@@ -38,5 +44,34 @@
   .review__item {
     display: flex;
     flex-direction: column-reverse;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review__author {
+    font-size: 24px;
+  }
+
+  .review__personal {
+    font-size: 18px;
+  }
+
+  .review__text {
+    margin: 20px auto;
+    width: 690px;
+    font-size: 18px;
+  }
+
+  .review__text span {
+    display: none;
+  }
+
+  .review__toggles {
+    display: none;
+  }
+
+  .review__item {
+    margin-bottom: 50px;
+    padding-top: 190px;
   }
 }

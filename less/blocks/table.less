@@ -1,11 +1,13 @@
 .table {
   margin-bottom: 40px;
   background: @white;
+  border-collapse: collapse;
 }
 
 .table__header-row {
   color: @white;
   background: @fontColor;
+  text-transform: uppercase;
 }
 
 .table__header {
@@ -20,12 +22,82 @@
   font-weight: lighter;
 }
 
+.table__header-cell {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 2px solid #e5e5e5;
+  border-top: 0;
+}
+
 .table__cell {
-  width: 276px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 20px;
+  width: 276px;
+  border: 2px solid #e5e5e5;
 }
 
 .table__item {
   font-size: 14px;
   line-height: 30px;
+  text-transform: uppercase;
+}
+
+.table__header-phantom,
+.table__cell--phantom {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .table {
+    margin: auto;
+  }
+
+  .table__header {
+    font-size: 16px;
+  }
+
+  .table__header--light {
+    font-size: 18px;
+  }
+
+  .table__cell {
+    width: 155px;
+  }
+
+  .table__item {
+    display: none;
+  }
+
+  .table__header-phantom,
+  .table__cell--phantom {
+    display: table-cell;
+  }
+
+  .table__header-phantom {
+    background-color: @lightBackground;
+    border: 0;
+  }
+
+  .table__cell--phantom {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table__cell {
+    width: 239px;
+  }
+
+  .table__header {
+    font-size: 18px;
+  }
+
+  .table__header--light {
+    font-size: 24px;
+  }
+
+  .table__cell--phantom {
+    font-size: 18px;
+  }
 }

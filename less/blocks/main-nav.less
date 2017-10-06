@@ -20,8 +20,6 @@
   font-weight: bold;
   line-height: 32px;
   list-style-type: none;
-
-  outline: solid 1px green;
 }
 
 .main-nav__link {
@@ -54,5 +52,12 @@
 
   .main-nav__toggle {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    font-weight: normal;
+    line-height: 18px;
   }
 }

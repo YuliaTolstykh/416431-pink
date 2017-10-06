@@ -1,6 +1,5 @@
 .tariff {
   background-color: @lightBackground;
-  outline: solid 2px gray;
 }
 
 .tariff__wrapper {
@@ -10,9 +9,30 @@
   padding-bottom: 20px;
 
   background-color: @lightBackground;
-  outline: solid 2px indigo;
 }
 
 .tariff__toggles {
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .tariff__wrapper {
+    margin: 0 20px;
+    padding-bottom: 50px;
+    width: auto;
+  }
+
+  .tariff__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tariff__wrapper {
+    padding-bottom: 100px;
+  }
+
+  .tariff {
+    margin-bottom: 50px;
+  }
 }

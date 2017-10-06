@@ -4,4 +4,21 @@
 
 .page-footer__wrapper {
   margin-bottom: 40px;
+  outline: solid 1px red;
+}
+
+.page-footer--index {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer--index {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
