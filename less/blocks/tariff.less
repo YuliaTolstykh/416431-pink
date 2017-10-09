@@ -3,11 +3,10 @@
 }
 
 .tariff__wrapper {
-  width: 830px;
-  margin-left: -255px;
   padding-top: 40px;
   padding-bottom: 20px;
 
+  overflow: hidden;
   background-color: @lightBackground;
 }
 
@@ -16,10 +15,15 @@
 }
 
 @media (min-width: @tablet-width) {
+  .tariff {
+    margin-bottom: 25px;
+  }
+
   .tariff__wrapper {
     margin: 0 20px;
     padding-bottom: 50px;
     width: auto;
+    overflow: inherit;
   }
 
   .tariff__toggles {
@@ -33,6 +37,6 @@
   }
 
   .tariff {
-    margin-bottom: 50px;
+    margin-bottom: 75px;
   }
 }

@@ -1,5 +1,4 @@
 .info {
-  padding-top: 10px;
   margin: 0;
   line-height: 1.2;
   text-align: center;
@@ -7,42 +6,41 @@
 }
 
 .info__text {
+  margin: 0;
+  margin-bottom: 32px;
   font-size: 24pt;
   font-weight: lighter;
 }
 
 .info__wrapper {
-  padding-top: 20px;
+  padding-bottom: 285px;
 
   background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-position: bottom;
+  background-position: center bottom -38px;
   background-repeat: no-repeat;
   background-color: @lightBackground;
 }
 
 .info__list {
+  margin: 0;
   padding: 0;
-  padding-bottom: 320px;
   list-style-type: none;
 }
 
-.info__item {
-  margin-bottom: 10px;
-}
-
 .info__slogan {
+  display: inline-block;
+  margin-bottom: 20px;
   font-size: 18px;
-  line-height: 30px;
+  line-height: @lineHeight;
   color: @black;
 }
 
 .info__sentence {
-  width: 260px;
+  width: 95%;
   margin: auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  margin-bottom: 35px;
 
-  line-height: 30px;
+  line-height: @lineHeight;
 }
 
 .info__british {
@@ -50,8 +48,24 @@
 }
 
 @media (min-width: @tablet-width) {
-  .info {
-    padding-top: 60px;
+  .info__text {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .info__text:last-of-type {
+    margin-bottom: 50px;
+  }
+
+  .info__sentence {
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    width: 95%;
+  }
+
+  .info__item:last-of-type .info__sentence {
+    margin: 0;
   }
 
   .info__list {
@@ -62,34 +76,18 @@
     text-align: left;
   }
 
-  .info__text {
-    font-size: 40px;
-    margin: 0;
-  }
-
-  .info__sentence {
-    padding-left: 0;
-    margin: 0;
-    margin-right: 20px;
-    width: auto;
-  }
-
   .info__wrapper {
-    box-sizing: border-box;
-    margin-top: 40px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 0;
 
-    background-size: auto 100%;
-    background-position: 20px 20px;
+    background-size: 275px auto;
+    background-position: 20px 0;
   }
 
   .info__british {
     display: block;
 
-    margin-top: -50px;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 45px;
     padding-left: 50%;
     width: 50%;
 
@@ -110,10 +108,12 @@
 
 @media (min-width: @desktop-width) {
   .info__wrapper {
-    margin: auto;
-    padding: auto;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
 
     background: none;
+    background-color: @lightBackground;
   }
 
   .info__text {
@@ -123,70 +123,64 @@
   .info__list {
     display: flex;
     justify-content: space-around;
-    // flex-shrink: 1;
 
     padding: 0;
-    width: 100%;
-    background-color: @lightBackground;
+    margin: 0 auto;
+    width: @desktop-width;
   }
 
   .info__item {
-    padding-top: 310px;
+    padding-top: 360px;
     flex-basis: 250px;
     text-align: center;
-    background-color: @lightBackground;
   }
 
   .info__item:nth-child(1) {
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-position: top center;
     background-repeat: no-repeat;
-    // background-color: @lightBackground;
   }
 
   .info__item:nth-child(2) {
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-position: top center;
     background-repeat: no-repeat;
-    // background-color: @lightBackground;
   }
 
   .info__item:nth-child(3) {
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-position: top center;
     background-repeat: no-repeat;
-    // background-color: @lightBackground;
   }
 
   .info__slogan {
     display: block;
 
-    margin-top: -50px;
-    padding-top: 60px;
+    margin-bottom: 35px;
     font-size: 30px;
-    background-color: @lightBackground;
   }
 
   .info__sentence {
-    margin-top: 30px;
+    margin: 0;
     font-size: 18px;
   }
 
   .info__british {
-    margin-top: -50px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 40%;
-    width: 60%;
+    box-sizing: border-box;
+    margin: auto;
+    padding-top: 160px;
+    padding-bottom: 115px;
+    padding-left: 380px;
+    width: @desktop-width;
 
     text-align: left;
-    background-color: @white;
+    background-color: @lightBackground;
   }
 
   .info__sentence--british {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-right: 70px;
+    margin: 0;
+    margin-bottom: 60px;
+    width: 496px;
   }
 
   .info__link {
@@ -196,7 +190,7 @@
   .info__slogan--big {
     padding: 0;
     font-size: 30px;
-    line-height: 30px;
+    line-height: @lineHeight;
   }
 
   .info__slogan--big br {

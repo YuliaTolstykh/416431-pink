@@ -1,7 +1,34 @@
 .submit {
   margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .submit__footnote {
-  line-height: 30px;
+  line-height: @lineHeight;
+}
+
+.submit__footnote span {
+  color: @darkPink;
+}
+
+@media (min-width: @tablet-width) {
+  .submit {
+    display: flex;
+    align-items: center;
+    padding-left: @paddingLeft;
+    padding-right: @paddingLeft;
+  }
+
+  .submit__button {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .submit {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }

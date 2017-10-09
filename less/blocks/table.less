@@ -2,6 +2,8 @@
   margin-bottom: 40px;
   background: @white;
   border-collapse: collapse;
+  transform: translateX(-50%);
+  margin-left: 50%;
 }
 
 .table__header-row {
@@ -14,7 +16,7 @@
   font-family: inherit;
   font-size: 18px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: @lineHeight;
 }
 
 .table__header--light {
@@ -25,21 +27,21 @@
 .table__header-cell {
   padding-top: 15px;
   padding-bottom: 15px;
-  border: 2px solid #e5e5e5;
+  border: 2px solid @borderColor;
   border-top: 0;
 }
 
 .table__cell {
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 20px;
-  width: 276px;
-  border: 2px solid #e5e5e5;
+  padding-left: 30px;
+  min-width: 250px;
+  border: 2px solid @borderColor;
 }
 
 .table__item {
   font-size: 14px;
-  line-height: 30px;
+  line-height: @lineHeight;
   text-transform: uppercase;
 }
 
@@ -50,7 +52,8 @@
 
 @media (min-width: @tablet-width) {
   .table {
-    margin: auto;
+    margin: 0 auto;
+    transform: none;
   }
 
   .table__header {
@@ -62,7 +65,7 @@
   }
 
   .table__cell {
-    width: 155px;
+    min-width: 120px;
   }
 
   .table__item {
@@ -76,7 +79,7 @@
 
   .table__header-phantom {
     background-color: @lightBackground;
-    border: 0;
+    border: 2px solid @lightBackground;
   }
 
   .table__cell--phantom {

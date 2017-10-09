@@ -12,17 +12,33 @@
 }
 
 .button--color {
-  margin-top: 10px;
-
   color: @darkPink;
-
   background-color: @lightBackground;
   border-color: @darkPink;
+}
+
+.button--color:first-of-type {
+  margin-bottom: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    width: 300px;
+  }
+
+  .button--color {
+    width: 260px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .button {
     width: 300px;
     font-size: 21px;
+  }
+
+  .button--color {
+    width: 185px;
+    font-size: 18px;
   }
 }

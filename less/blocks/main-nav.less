@@ -1,6 +1,5 @@
 .main-nav {
   margin: 0 auto;
-  outline: solid 1px yellow;
 }
 
 .main-nav__part {
@@ -19,6 +18,7 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 32px;
+  text-transform: uppercase;
   list-style-type: none;
 }
 
@@ -26,11 +26,13 @@
   color: @white;
 }
 
-.main-nav__logo {
-  outline: solid 1px red;
-}
 
 @media (min-width: @desktop-width) {
+  .main-nav__container {
+    background-color: rgba(29, 38, 49, 0.5);
+    background-origin: border-box;
+  }
+
   .main-nav {
     display: flex;
     justify-content: space-around;
@@ -42,7 +44,6 @@
 
   .main-nav__list {
     display: flex;
-    // flex-wrap: wrap;
     justify-content: space-between;
   }
 
@@ -56,6 +57,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav {
+    width: @desktop-width;
+  }
+
   .main-nav__list {
     font-weight: normal;
     line-height: 18px;
