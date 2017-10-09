@@ -34,8 +34,13 @@
 }
 
 @media (min-width: @tablet-width) {
+  .photo__image {
+    width: 300px;
+    height: auto;
+  }
+
   .photo__image--panorama {
-    width: 100%;
+    width:  @tablet-width;
     height: auto;
   }
 
@@ -79,15 +84,6 @@
   .photo__text--color {
     min-height: 30px;
     order: 4;
-  }
-
-  .photo__image {
-    width: 300px;
-    height: auto;
-  }
-
-  .photo__image--panorama {
-    width: @tablet-width;
   }
 }
 
