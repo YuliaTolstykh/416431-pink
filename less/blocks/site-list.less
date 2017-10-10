@@ -5,18 +5,20 @@
 .site-list__item {
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: solid 1px #485461;
+  box-shadow:
+    0 -2px 0 0 @black,
+    0 2px 0 0 #485461;
 }
 
 .site-list__item:last-child {
-  border-bottom: solid 1px #485461;
+  border-bottom: solid 2px @black;
 }
 
 @media (min-width: @desktop-width) {
   .site-list__item {
     padding-top: 40px;
     padding-bottom: 40px;
-    border: none;
+    box-shadow: none;
   }
 
   .site-list__item:last-child {
