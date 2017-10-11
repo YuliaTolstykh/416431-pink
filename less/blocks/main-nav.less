@@ -31,14 +31,10 @@
 
 
 @media (min-width: @desktop-width) {
-  .main-nav__container {
-    background-color: rgba(29, 38, 49, 0.5);
-    background-origin: border-box;
-  }
-
   .main-nav {
     display: flex;
     justify-content: space-around;
+    width: @desktop-width;
   }
 
   .main-nav__wrapper {
@@ -48,6 +44,8 @@
   .main-nav__list {
     display: flex;
     justify-content: space-between;
+    font-weight: normal;
+    line-height: 18px;
   }
 
   .main-nav__part {
@@ -57,16 +55,5 @@
 
   .main-nav__toggle {
     display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-nav {
-    width: @desktop-width;
-  }
-
-  .main-nav__list {
-    font-weight: normal;
-    line-height: 18px;
   }
 }

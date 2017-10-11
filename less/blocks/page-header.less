@@ -7,7 +7,6 @@
 }
 
 .page-header__bottom {
-  display: block;
   width: 320px;
   height: 462px;
   margin: 0 auto;
@@ -18,10 +17,13 @@
 }
 
 .page-header__bottom--inner {
-  margin-bottom: 55px;
   padding: 35px 0 50px 0;
   height: auto;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
   background-position: top -20px center;
+
 }
 
 .page-header__headline {
@@ -31,7 +33,7 @@
 .page-header__text {
   display: block;
 
-  margin: auto;
+  margin: 0 auto;
   padding-top: 100px;
   width: 280px;
 
@@ -78,11 +80,14 @@
   }
 
   .page-header__bottom--inner {
-    margin-bottom: 100px;
     padding: 75px 0;
     height: auto;
+    width: 100%;
+
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-position: top -20px center;
+    background-size: auto 450px;
+    background-repeat: no-repeat;
   }
 
   .page-header__headline {
@@ -122,16 +127,12 @@
   }
 
   .page-header {
-    width: auto;
+    width: 100%;
 
     background-image: url("../img/bg-back-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 1200px auto;
-  }
-
-  .page-header--inner {
-    background-position: center top;
   }
 
   .page-header__text--inner {
@@ -142,6 +143,8 @@
   .page-header__bottom--inner {
     padding: 75px 0 90px 0;
     height: auto;
+    width: 100%;
+    background-image: none;
   }
 
   .page-header__headline {
