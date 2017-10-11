@@ -88,6 +88,8 @@
 .form-main {
   padding-bottom: 50px;
 }
+
+@media (min-width: @tablet-width) {
   .form-main {
     display: flex;
     flex-direction: column;
@@ -147,12 +149,15 @@
     margin: 0 20px 60px 20px;
     padding-left: 60px;
     padding-right: 60px;
+    order: 3;
   }
 
   .form--software {
+    order: 2;
   }
 
   .form-emotion__wrapper {
+    order: 5;
   }
 
   .form--progress,
@@ -160,11 +165,17 @@
     margin: 0 20px;
     margin-bottom: 55px;
     padding: 0;
+    background: inherit;
+  }
+
+  .form--person {
+    border: none;
   }
 
   .form__item {
     display: flex;
     align-items: baseline;
+  }
 
   .form--contact .form__item {
     margin-bottom: 35px;
@@ -213,6 +224,9 @@
 
   .form__list {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
     height: 180px;
   }
 
