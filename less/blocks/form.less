@@ -90,12 +90,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
   .form {
     margin: 0;
     margin-bottom: 50px;
@@ -157,7 +151,7 @@
     order: 2;
   }
 
-  .form-emotion__wrapper {
+  .form--emotion {
     order: 5;
   }
 
@@ -205,15 +199,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form-main {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    width: @desktop-width;
-    margin: auto;
-  }
-
   .form__text--mark,
   .form__text--radio {
     margin-bottom: 45px;
@@ -259,7 +244,7 @@
     width: 430px;
   }
 
-  .form-emotion__wrapper {
+  .form--emotion {
     margin-left: 10px;
     margin-right: 10px;
     width: 100%;

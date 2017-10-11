@@ -41,6 +41,12 @@
     padding-top: 60px;
   }
 
+  .page-main__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .page-main__text {
     margin-bottom: 70px;
     width: 500px;
@@ -75,6 +81,15 @@
   .page-main {
     margin: auto;
     width: 100%;
+  }
+
+  .page-main__form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: @desktop-width;
+    margin: auto;
   }
 
   .page-main--inner {
