@@ -85,8 +85,22 @@
   background-color: inherit;
 }
 
-.form-main {
-  padding-bottom: 50px;
+.form__submit {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form__footnote {
+  text-transform: uppercase;
+  line-height: @lineHeight;
+}
+
+.form__footnote span {
+  color: @darkPink;
+}
+
+.form__button {
+  margin-bottom: 40px;
 }
 
 @media (min-width: @tablet-width) {
@@ -152,7 +166,24 @@
   }
 
   .form--emotion {
+    margin: 0 20px 70px 20px;
+    padding-bottom: 55px;
+    padding-left: 60px;
+    padding-right: 60px;
     order: 5;
+  }
+
+  .form__submit {
+    display: flex;
+    align-items: center;
+    padding-left: @paddingLeft;
+    padding-right: @paddingLeft;
+    order: 6;
+  }
+
+  .form__button {
+    margin-bottom: 0;
+    margin-left: 0;
   }
 
   .form--progress,
@@ -184,13 +215,6 @@
 
   .form--emotion .form__headline {
     margin-bottom: 40px;
-  }
-
-  .form--emotion {
-    margin: 0 20px 70px 20px;
-    padding-bottom: 55px;
-    padding-left: 60px;
-    padding-right: 60px;
   }
 
   .form__text--area {
@@ -245,16 +269,16 @@
   }
 
   .form--emotion {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 100%;
-  }
-
-  .form--emotion {
-    margin: 0;
-    margin-bottom: 65px;
+    margin: 0 10px 65px 10px;
     padding-bottom: 45px;
     padding-left: 60px;
     padding-right: 60px;
+    width: 100%;
+  }
+
+  .form__submit {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
   }
 }
