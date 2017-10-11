@@ -1,18 +1,42 @@
 .tariff {
   background-color: @lightBackground;
-  outline: solid 2px gray;
 }
 
 .tariff__wrapper {
-  width: 830px;
-  margin-left: -255px;
   padding-top: 40px;
   padding-bottom: 20px;
 
+  overflow: hidden;
   background-color: @lightBackground;
-  outline: solid 2px indigo;
 }
 
 .tariff__toggles {
   text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .tariff {
+    margin-bottom: 25px;
+  }
+
+  .tariff__wrapper {
+    margin: 0 20px;
+    padding-bottom: 50px;
+    width: auto;
+    overflow: inherit;
+  }
+
+  .tariff__toggles {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tariff__wrapper {
+    padding-bottom: 100px;
+  }
+
+  .tariff {
+    margin-bottom: 75px;
+  }
 }

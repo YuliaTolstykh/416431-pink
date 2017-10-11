@@ -1,8 +1,5 @@
-.photo {
-  outline: solid 2px lightblue;
-}
-
 .photo__image {
+  margin-bottom: 25px;
   width: 280px;
   height: 180px;
 }
@@ -10,13 +7,93 @@
 .photo__image--panorama {
   width: 320px;
   height: 137px;
-  margin-left: -20px;
 }
 
-.photo__text {
+.photo__wrapper {
+  margin: auto;
   padding-left: 10px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  width: 280px;
+}
+
+.photo__button {
+  width: 25px;
+  height: 25px;
 }
 
 .photo__text--color {
+  font-size: 12px;
+  text-transform: uppercase;
   color: @darkPink;
+}
+
+.photo__time {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .photo__image {
+    width: 300px;
+    height: auto;
+  }
+
+  .photo__image--panorama {
+    width: @tablet-width;
+    height: auto;
+  }
+
+  .photo__wrapper--panorama {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25px 25px 25px;
+    width: 100%;
+  }
+
+  .photo__wrapper--panorama .photo__like {
+    width: 150px;
+  }
+
+  .photo__wrapper--panorama .photo__text {
+    width: 510px;
+  }
+
+  .photo__author {
+    margin-right: 5px;
+    order: 1;
+  }
+
+  .photo__time {
+    order: 2;
+  }
+
+  .photo__text {
+    margin: 0;
+    min-height: 50px;
+    order: 4;
+  }
+
+  .photo__like {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: auto;
+    order: 3;
+  }
+
+  .photo__text--color {
+    min-height: 30px;
+    order: 4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo__image--panorama {
+    width: @desktop-width;
+  }
+
+  .photo__wrapper--panorama .photo__text {
+    width: 870px;
+    min-height: 30px;
+  }
 }

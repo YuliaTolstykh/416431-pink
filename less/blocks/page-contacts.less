@@ -2,13 +2,22 @@
   text-align: center;
 }
 
-.page-contacts__wrapper {
-  padding-top: 24px;
-}
-
 .page-contacts__map {
   width: 320px;
   height: 421px;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .page-contacts__map {
+    width: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-contacts__wrapper {
+    margin: 0 auto;
+    width: @desktop-width;
+  }
 }

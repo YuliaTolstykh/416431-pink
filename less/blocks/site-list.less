@@ -1,3 +1,27 @@
 .site-list {
-  outline: solid 2px blue;
+  text-align: center;
+}
+
+.site-list__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow:
+    0 -2px 0 0 @black,
+    0 2px 0 0 #485461;
+}
+
+.site-list__item:last-child {
+  border-bottom: solid 2px @black;
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    box-shadow: none;
+  }
+
+  .site-list__item:last-child {
+    border: none;
+  }
 }

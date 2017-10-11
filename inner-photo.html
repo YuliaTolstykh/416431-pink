@@ -7,136 +7,158 @@
   </head>
   <body>
     <div class="page-wrapper">
-      <header class="page-header">
-        <nav class="main-nav">
-          <div class="main-nav__item">
-            <a class="main-nav__logo" href="index.html">PINK</a>
-            <button class="main-nav__toggle" type="button">X Окрыть меню</button>
-          </div>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="main-nav__link" href="index.html">Главная</a>
-              </li>
-              <li class="site-list__item site-list__item--active">
-                <a class="main-nav__link"> Фотографии</a>
-              </li>
-              <li class="site-list__item">
-                <a class="main-nav__link" href="inner-form.html">Конкурс</a>
-              </li>
-              <li class="site-list__item">
-                <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="page-header__bottom">
-          <p class="page-header__text">Фотографии пользователей</p>
+      <header class="page-header page-header--inner">
+        <div class="page-wrapper__main-nav">
+          <nav class="main-nav">
+            <div class="main-nav__part">
+              <a class="main-nav__logo" href="index.html">PINK</a>
+              <button class="main-nav__toggle" type="button">X Окрыть меню</button>
+            </div>
+            <div class="main-nav__wrapper">
+              <ul class="main-nav__list site-list">
+                <li class="site-list__item">
+                  <a class="main-nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="site-list__item site-list__item--active">
+                  <a class="main-nav__link"> Фотографии</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="main-nav__link" href="inner-form.html">Конкурс</a>
+                </li>
+                <li class="site-list__item">
+                  <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="page-header__bottom page-header__bottom--inner">
+          <p class="page-header__text page-header__text--photo">Фотографии пользователей</p>
         </div>
       </header>
-      <main class="page-main">
-        <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <main class="page-main page-main--inner">
+        <p class="page-main__text page-main__text--photo">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <ul class="page-main__list">
           <li class="page-main__item photo">
             <a class="photo__link" href="#">
               <img class="photo__image photo__image--panorama" src="img/panorama-mobile@1x.jpg" width="320" height="137">
             </a>
-            <b class="photo__author">Анна</b>
-            <time class="photo__time">(5 минут назад)</time>
-            <p class="photo__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте вопросы!</p>
-            <div class="photo__like">
-              <button class="photo__button" type="button">like</button>
-              <span class="photo__text photo__text--color">Нравится: 215</span>
+            <div class="photo__wrapper photo__wrapper--panorama">
+              <b class="photo__author">Анна</b>
+              <time class="photo__time">(5 минут назад)</time>
+              <p class="photo__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте вопросы!</p>
+              <div class="photo__like">
+                <button class="photo__button" type="button">like</button>
+                <span class="photo__text photo__text--color">Нравится: 215</span>
+              </div>
             </div>
           </li>
           <li class="page-main__item photo">
             <a class="photo__link" href="#">
               <img class="photo__image" src="img/photo-car-mobile@1x.jpg" width="280" height="180">
             </a>
-            <b class="photo_author">Левон</b>
-            <time class="photo__time">(5 часов назад)</time>
-            <p class="photo__text">Вчера он на луну летал, сегодня в руки нам попал.</p>
-            <div class="photo__like">
-              <button class="photo__button" type="button">like</button>
-              <span class="photo__text photo__text--color">Нравится: 356</span>
+            <div class="photo__wrapper">
+              <b class="photo_author">Левон</b>
+              <time class="photo__time">(5 часов назад)</time>
+              <p class="photo__text">Вчера он на луну летал, сегодня в руки нам попал.</p>
+              <div class="photo__like">
+                <button class="photo__button" type="button">like</button>
+                <span class="photo__text photo__text--color">Нравится: 356</span>
+              </div>
             </div>
           </li>
           <li class="page-main__item photo">
             <a class="photo__link" href="#">
               <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" width="280" height="180">
             </a>
-            <b class="photo_author">Антон</b>
-            <time class="photo__time">(12 часов назад)</time>
-            <p class="photo__text">Соседи будут рады!</p>
-            <div class="photo__like">
-              <button class="photo__button" type="button">like</button>
-              <span class="photo__text photo__text--color">Нравится: 666</span>
+            <div class="photo__wrapper">
+              <b class="photo_author">Антон</b>
+              <time class="photo__time">(12 часов назад)</time>
+              <p class="photo__text">Соседи будут рады!</p>
+              <div class="photo__like">
+                <button class="photo__button" type="button">like</button>
+                <span class="photo__text photo__text--color">Нравится: 666</span>
+              </div>
             </div>
           </li>
           <li class="page-main__item photo">
             <a class="photo__link" href="#">
               <img class="photo__image" src="img/photo-window-mobile@1x.jpg" width="280" height="180">
             </a>
-            <b class="photo_author">Борис</b>
-            <time class="photo__time">(20 часов назад)</time>
-            <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="photo__like">
-              <button class="photo__button" type="button">like</button>
-              <span class="photo__text photo__text--color">Нравится: 215</span>
+            <div class="photo__wrapper">
+              <b class="photo_author">Борис</b>
+              <time class="photo__time">(20 часов назад)</time>
+              <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="photo__like">
+                <button class="photo__button" type="button">like</button>
+                <span class="photo__text photo__text--color">Нравится: 215</span>
+              </div>
             </div>
           </li>
           <li class="page-main__item photo">
             <a class="photo__link" href="#">
               <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" width="280" height="180">
             </a>
-            <b class="photo_author">Сергей</b>
-            <time class="photo__time">(25 часов назад)</time>
-            <p class="photo__text">Самая кубанская в мире!</p>
-            <div class="photo__like">
-              <button class="photo__button" type="button">like</button>
-              <span class="photo__text photo__text--color">Нравится: 4</span>
+            <div class="photo__wrapper">
+              <b class="photo_author">Сергей</b>
+              <time class="photo__time">(25 часов назад)</time>
+              <p class="photo__text">Самая кубанская в мире!</p>
+              <div class="photo__like">
+                <button class="photo__button" type="button">like</button>
+                <span class="photo__text photo__text--color">Нравится: 4</span>
+              </div>
             </div>
           </li>
           <li class="page-main__item photo">
             <a class="photo__link" href="#">
               <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" width="280" height="180">
             </a>
-            <b class="photo_author">Максим</b>
-            <time class="photo__time">(40 часов назад)</time>
-            <p class="photo__text">Где снег-то?</p>
-            <div class="photo__like">
-              <button class="photo__button" type="button">like</button>
-              <span class="photo__text photo__text--color">Нравится: 150</span>
+            <div class="photo__wrapper">
+              <b class="photo_author">Максим</b>
+              <time class="photo__time">(40 часов назад)</time>
+              <p class="photo__text">Где снег-то?</p>
+              <div class="photo__like">
+                <button class="photo__button" type="button">like</button>
+                <span class="photo__text photo__text--color">Нравится: 150</span>
+              </div>
             </div>
           </li>
           <li class="page-main__item photo">
             <a class="photo__link" href="#">
               <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" width="280" height="180">
             </a>
-            <b class="photo_author">Надежда</b>
-            <time class="photo__time">(45 часов назад)</time>
-            <p class="photo__text">Всем GM и взаимные лайки!</p>
-            <div class="photo__like">
-              <button class="photo__button" type="button">like</button>
-              <span class="photo__text photo__text--color">Нравится: 2560</span>
+            <div class="photo__wrapper">
+              <b class="photo_author">Надежда</b>
+              <time class="photo__time">(45 часов назад)</time>
+              <p class="photo__text">Всем GM и взаимные лайки!</p>
+              <div class="photo__like">
+                <button class="photo__button" type="button">like</button>
+                <span class="photo__text photo__text--color">Нравится: 2560</span>
+              </div>
             </div>
           </li>
         </ul>
-        <p class="page-main__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <p class="page-main__text">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
         <form class="processing" action="https://echo.htmlacademy.ru" method="post">
           <div class="processing__wrapper">
             <h2 class="visually-hidden">Обработка фотографий</h2>
-            <img class="processing__image" src="img/photo-road-mobile@1x.jpg"  width="280" height="374">
-            <div class="processing__tools tools">
-              <button class="tools__crop" type="button">Обрезать</button>
-              <button class="tools__fill" type="button">Заливка</button>
-              <button class="tools__bright" type="button">Яркость</button>
-              <div class="tools__scale"></div>
-              <div class="tools__toggle"></div>
+            <div class="processing__image-wrapper">
+              <img class="processing__image" src="img/photo-road-mobile@1x.jpg"  width="280" height="374">
             </div>
-            <div class="processing__button">
-              <button class="button button--color" type="submit">Запостить</button>
-              <button class="button button--color" type="reset">Отмена</button>
+            <div class="processing__part">
+              <div class="processing__tools tools">
+                <button class="tools__crop" type="button">Обрезать</button>
+                <button class="tools__fill" type="button">Заливка</button>
+                <button class="tools__bright" type="button">Яркость</button>
+                <div class="tools__scale-wrapper">
+                  <div class="tools__scale"></div>
+                  <div class="tools__toggle"></div>
+                </div>
+              </div>
+              <div class="processing__button">
+                <button class="button button--color" type="submit">Запостить</button>
+                <button class="button button--color" type="reset">Отмена</button>
+              </div>
             </div>
           </div>
         </form>
@@ -144,7 +166,7 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="index.html">
-            <img class="page-footer__logo-image" src="img/logotype-mobile.svg" width="100" height="30" alt="Приложение Пинк">
+            <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="100" height="30" alt="Приложение Пинк">
           </a>
             <div class="page-footer__social social">
             <ul class="social__list">

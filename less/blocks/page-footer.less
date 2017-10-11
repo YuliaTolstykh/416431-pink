@@ -1,7 +1,27 @@
 .page-footer {
-  margin: auto;
+  margin: 0 auto;
 }
 
-.page-footer__wrapper {
-  margin-bottom: 40px;
+.page-footer--index {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer--index {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: @desktop-width;
+  }
 }

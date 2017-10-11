@@ -1,18 +1,22 @@
 .table {
   margin-bottom: 40px;
   background: @white;
+  border-collapse: collapse;
+  transform: translateX(-50%);
+  margin-left: 50%;
 }
 
 .table__header-row {
   color: @white;
   background: @fontColor;
+  text-transform: uppercase;
 }
 
 .table__header {
   font-family: inherit;
   font-size: 18px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: @lineHeight;
 }
 
 .table__header--light {
@@ -20,12 +24,83 @@
   font-weight: lighter;
 }
 
+.table__header-cell {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 2px solid @borderColor;
+  border-top: 0;
+}
+
 .table__cell {
-  width: 276px;
-  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  min-width: 250px;
+  border: 2px solid @borderColor;
 }
 
 .table__item {
   font-size: 14px;
-  line-height: 30px;
+  line-height: @lineHeight;
+  text-transform: uppercase;
+}
+
+.table__header-phantom,
+.table__cell--phantom {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .table {
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .table__header {
+    font-size: 16px;
+  }
+
+  .table__header--light {
+    font-size: 18px;
+  }
+
+  .table__cell {
+    min-width: 120px;
+  }
+
+  .table__item {
+    display: none;
+  }
+
+  .table__header-phantom,
+  .table__cell--phantom {
+    display: table-cell;
+  }
+
+  .table__header-phantom {
+    background-color: @lightBackground;
+    border: 2px solid @lightBackground;
+  }
+
+  .table__cell--phantom {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .table__cell {
+    width: 239px;
+  }
+
+  .table__header {
+    font-size: 18px;
+  }
+
+  .table__header--light {
+    font-size: 24px;
+  }
+
+  .table__cell--phantom {
+    font-size: 18px;
+  }
 }

@@ -1,64 +1,284 @@
 .form {
-  margin-top: 40px;
+  margin: 0;
+  margin-bottom: 40px;
   padding: 0;
-
+  padding-left: @paddingLeft;
+  padding-right: @paddingRight;
   border: 0;
-  outline: solid 2px pink;
-}
-
-.form--background {
-  background-color: @lightBackground;
-}
-
-.form__item {
-  margin: 20px;
 }
 
 .form__title {
-  margin-bottom: 20px;
+  display: block;
+  margin-left: 20px;
 
   font-size: 14px;
-  line-height: 30px;
+  line-height: @lineHeight;
+  text-transform: uppercase;
   color: @darkPink;
 }
 
 .form__text {
   display: block;
-  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  width: 100%;
 
   font-family: inherit;
   font-size: 18px;
-  line-height: 30px;
+  line-height: @lineHeight;
   color: @fontColor;
+  border: 2px solid @borderColor;
+}
 
-  outline: solid 2px pink;
+.form__text--mark,
+.form__text--radio {
+  margin-bottom: 0;
+  padding-left: 90px;
+  padding-right: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border: none;
+}
+
+.form__mark,
+.form__radio {
+  display: none;
 }
 
 .form__text--area {
-  width: 276px;
-  height: 197px;
   margin: auto;
-  margin-bottom: 40px;
+  width: 100%;
+  height: 200px;
+}
+
+.form--progress,
+.form--software {
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 25px;
+  background: @lightBackground;
 }
 
 .form__headline {
-  width: 100%;
   box-sizing: border-box;
-  padding-top: 30px;
-  padding-left: 40px;
-  padding-right: 40px;
+  margin-bottom: 15px;
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
 
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
   text-align: center;
   color: @darkPink;
-
   background: @lightBackground;
-  outline: solid 2px lightblue;
 }
 
-.form__headline--background {
-  margin-bottom: 20px;
+.form__headline--contact {
+  display: none;
+}
 
-  background: @white;
+.form--emotion .form__headline {
+  padding-top: 0;
+  background-color: inherit;
+}
+
+.form__submit {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form__footnote {
+  text-transform: uppercase;
+  line-height: @lineHeight;
+}
+
+.form__footnote span {
+  color: @darkPink;
+}
+
+.form__button {
+  margin-bottom: 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    margin: 0;
+    margin-bottom: 50px;
+    padding-left: @paddingLeft;
+    padding-right: @paddingRight;
+    border: 2px solid @borderColor;
+    border-radius: 5px;
+  }
+
+  .form__text {
+    flex-grow: 1;
+    margin: 0;
+    margin-bottom: 55px;
+    padding: 20px;
+  }
+
+  .form__text--mark,
+  .form__text--radio {
+    padding: 0;
+    padding-left: 120px;
+  }
+
+  .form__title {
+    margin: 0;
+    margin-right: 20px;
+  }
+
+  .form__headline {
+    margin-bottom: 55px;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    background: inherit;
+  }
+
+  .form__headline--contact {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .form--person {
+    order: 1;
+    border: none;
+  }
+
+  .form--progress {
+    order: 4;
+  }
+
+  .form--contact {
+    margin: 0 20px 60px 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    order: 3;
+  }
+
+  .form--software {
+    order: 2;
+  }
+
+  .form--emotion {
+    margin: 0 20px 70px 20px;
+    padding-bottom: 55px;
+    padding-left: 60px;
+    padding-right: 60px;
+    order: 5;
+  }
+
+  .form__submit {
+    display: flex;
+    align-items: center;
+    padding-left: @paddingLeft;
+    padding-right: @paddingLeft;
+    order: 6;
+  }
+
+  .form__button {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .form--progress,
+  .form--software {
+    margin: 0 20px;
+    margin-bottom: 55px;
+    padding: 0;
+    background: inherit;
+  }
+
+  .form__item {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .form--contact .form__item {
+    margin-bottom: 35px;
+    flex-direction: column-reverse;
+  }
+
+  .form--contact .form__title {
+    margin-left: 20px;
+  }
+
+  .form--contact .form__text {
+    margin-bottom: 15px;
+    padding-right: 60px;
+  }
+
+  .form--emotion .form__headline {
+    margin-bottom: 40px;
+  }
+
+  .form__text--area {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__text--mark,
+  .form__text--radio {
+    margin-bottom: 45px;
+  }
+
+  .form__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
+    height: 180px;
+  }
+
+  .form--person {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    padding-top: 7px;
+    padding-right: 40px;
+    padding-left: 10px;
+    width: 50%;
+  }
+
+  .form--progress {
+    margin: 0 10px;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+  .form--contact {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .form--software {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    margin-left: 40px;
+    padding-bottom: 40px;
+    width: 430px;
+  }
+
+  .form--emotion {
+    margin: 0 10px 65px 10px;
+    padding-bottom: 45px;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+  }
+
+  .form__submit {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+  }
 }
