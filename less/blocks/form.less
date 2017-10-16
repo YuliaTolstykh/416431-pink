@@ -1,32 +1,40 @@
 .form {
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
   padding-left: @paddingLeft;
   padding-right: @paddingRight;
   border: 0;
 }
 
+.form--person {
+  margin-bottom: 40px;
+}
+
 .form__title {
   display: block;
-  margin-left: 20px;
+  margin-left: 24px;
 
   font-size: 14px;
   line-height: @lineHeight;
   text-transform: uppercase;
   color: @darkPink;
+  letter-spacing: 0.03em;
 }
 
 .form__text {
   display: block;
   box-sizing: border-box;
-  margin-bottom: 25px;
-  padding: 15px 20px;
+  margin-bottom: 21px;
+  padding-top: 18px;
+  padding-bottom: 12px;
+  padding-left: 22px;
+  padding-right: 20px;
   width: 100%;
 
   font-family: inherit;
   font-size: 18px;
   line-height: @lineHeight;
+  letter-spacing: 0.02em;
   color: @fontColor;
   border: 2px solid @borderColor;
 }
@@ -37,8 +45,13 @@
   padding-left: 90px;
   padding-right: 0;
   padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   border: none;
+}
+
+.form__text--radio {
+  padding-top: 22px;
+  padding-bottom: 23px;
 }
 
 .form__mark,
@@ -48,28 +61,45 @@
 
 .form__text--area {
   margin: auto;
+  padding: 20px;
+  padding-top: 12px;
   width: 100%;
   height: 200px;
+  letter-spacing: initial;
 }
 
 .form--progress,
 .form--software {
+  margin-bottom: 32px;
   padding-right: 0;
   padding-left: 0;
-  padding-bottom: 25px;
+  padding-bottom: 21px;
   background: @lightBackground;
+}
+
+.form--software {
+  padding-bottom: 23px;
+}
+
+.form--contact {
+  margin-bottom: 40px;
+}
+
+.form--emotion {
+  margin-bottom: 48px;
 }
 
 .form__headline {
   box-sizing: border-box;
-  margin-bottom: 15px;
-  padding-top: 40px;
+  margin-bottom: 18px;
+  padding-top: 22px;
   padding-left: 50px;
   padding-right: 50px;
   width: 100%;
 
   font-size: 14px;
   line-height: 18px;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   text-align: center;
   color: @darkPink;
@@ -80,50 +110,68 @@
   display: none;
 }
 
+.form--software .form__headline  {
+  margin-bottom: 17px;
+}
+
 .form--emotion .form__headline {
-  padding-top: 0;
+  padding: 0;
+  padding-top: 7px;
   background-color: inherit;
 }
 
 .form__submit {
-  margin-bottom: 30px;
+  margin-bottom: 3px;
   text-align: center;
 }
 
 .form__footnote {
   text-transform: uppercase;
+  letter-spacing: 0.02em;
   line-height: @lineHeight;
 }
 
-.form__footnote span {
+.form__footnote span:first-of-type {
   color: @darkPink;
 }
 
 .form__button {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 @media (min-width: @tablet-width) {
   .form {
     margin: 0;
-    margin-bottom: 50px;
     padding-left: @paddingLeft;
     padding-right: @paddingRight;
     border: 2px solid @borderColor;
     border-radius: 5px;
   }
 
+  .form--person {
+    margin-bottom: 7px;
+  }
+
   .form__text {
     flex-grow: 1;
     margin: 0;
-    margin-bottom: 55px;
-    padding: 20px;
+    margin-bottom: 52px;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    padding-left: 19px;
   }
 
   .form__text--mark,
   .form__text--radio {
     padding: 0;
-    padding-left: 120px;
+    padding-left: 118px;
+  }
+
+  .form__text--radio {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 98px;
+    padding-bottom: 45px;
   }
 
   .form__title {
@@ -140,9 +188,13 @@
     background: inherit;
   }
 
+  .form--software .form__headline  {
+    margin-bottom: 47px;
+  }
+
   .form__headline--contact {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   .form--person {
@@ -150,31 +202,32 @@
     border: none;
   }
 
-  .form--progress {
-    order: 4;
-  }
-
   .form--contact {
-    margin: 0 20px 60px 20px;
-    padding-left: 60px;
-    padding-right: 60px;
+    margin: 0 20px 55px 20px;
+    padding-left: 57px;
+    padding-right: 58px;
     order: 3;
   }
 
   .form--software {
+    margin: 0 20px;
+    margin-bottom: 57px;
+    padding-bottom: 14px;
+    background: inherit;
     order: 2;
   }
 
   .form--emotion {
     margin: 0 20px 70px 20px;
-    padding-bottom: 55px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-bottom: 50px;
+    padding-left: 58px;
+    padding-right: 58px;
     order: 5;
   }
 
   .form__submit {
     display: flex;
+    flex-shrink: 0;
     align-items: center;
     padding-left: @paddingLeft;
     padding-right: @paddingLeft;
@@ -184,14 +237,19 @@
   .form__button {
     margin-bottom: 0;
     margin-left: 0;
+    margin-right: auto;
   }
 
-  .form--progress,
-  .form--software {
+  .form--progress {
     margin: 0 20px;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
     padding: 0;
     background: inherit;
+    order: 4;
+  }
+
+  .form--progress .form__headline {
+    margin-bottom: 48px;
   }
 
   .form__item {
@@ -200,7 +258,7 @@
   }
 
   .form--contact .form__item {
-    margin-bottom: 35px;
+    margin-bottom: 28px;
     flex-direction: column-reverse;
   }
 
@@ -209,76 +267,150 @@
   }
 
   .form--contact .form__text {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding-right: 60px;
   }
 
   .form--emotion .form__headline {
-    margin-bottom: 40px;
+    margin-bottom: 34px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   .form__text--area {
     margin: 0;
+    height: 194px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .form__text--mark,
-  .form__text--radio {
-    margin-bottom: 45px;
-  }
-
   .form__list {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: space-around;
-    height: 180px;
+    height: 172px;
+  }
+
+  .form--contact .form__list {
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 115px;
+  }
+
+  .form--contact .form__title {
+    margin-left: 17px;
+  }
+
+  .form--contact .form__text {
+    padding-left: 16px;
+  }
+
+  .form__text--radio {
+    padding-left: 133px;
+  }
+
+  .form--software .form__headline  {
+    margin-bottom: 49px;
   }
 
   .form--person {
     box-sizing: border-box;
     margin: 0;
+    margin-bottom: 6px;
     padding: 0;
-    padding-top: 7px;
+    padding-top: 15px;
     padding-right: 40px;
-    padding-left: 10px;
+    padding-left: 5px;
     width: 50%;
   }
 
   .form--progress {
     margin: 0 10px;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
     width: 100%;
   }
 
   .form--contact {
+    padding: 0;
     margin-right: 10px;
     margin-left: 10px;
+    margin-bottom: 57px;
     width: 100%;
+  }
+
+  .form--contact .form__headline {
+    margin-bottom: 34px;
+    padding-left: 12px;
+    padding-right: 16px;
+  }
+
+  .form--contact .form__item {
+    margin: 0 auto;
+    width: 42%;
+    outline: 1px solid red;
   }
 
   .form--software {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    margin-right: 10px;
-    margin-left: 40px;
-    padding-bottom: 40px;
-    width: 430px;
+    margin-right: 9px;
+    margin-left: 24px;
+    padding-bottom: 14px;
+    width: 433px;
+  }
+
+  .form__text--mark {
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-left: 96px;
+    outline: 1px solid red;
+  }
+
+  .form--progress .form__list {
+    padding-left: 40px;
+    padding-right: 23px;
+  }
+
+  .form--progress .form__item {
+    box-sizing: border-box;
+    padding-left: 40px;
+  }
+
+  .form__text--mark {
+    padding: 0;
+  }
+
+  .form--emotion .form__headline {
+    padding-top: 0;
   }
 
   .form--emotion {
-    margin: 0 10px 65px 10px;
-    padding-bottom: 45px;
-    padding-left: 60px;
+    margin: 0 10px 68px 10px;
+    padding-bottom: 43px;
+    padding-left: 56px;
     padding-right: 60px;
     width: 100%;
+  }
+
+  .form__text--area {
+    height: 127px;
   }
 
   .form__submit {
     padding-left: 10px;
     padding-right: 10px;
     width: 100%;
+  }
+
+  .form__footnote {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  .form__button {
+    margin-bottom: 0;
+    margin-left: 9px;
   }
 }

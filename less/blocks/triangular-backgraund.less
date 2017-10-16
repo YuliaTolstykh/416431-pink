@@ -1,0 +1,58 @@
+.triangular-backgraund {
+  display: block;
+  width: 320px;
+  height: 35px;
+
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-color: @lightBackground;
+  background-position: center;
+}
+
+.triangular-backgraund--down {
+  height: 35px;
+  background-image: url("../img/bg-triangle-white-footer.svg");
+  background-color: transparent;
+  background-size: 320px 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .triangular-backgraund--none {
+    display: none;
+  }
+
+  .triangular-backgraund {
+    width: 660px;
+    height: 60px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-color: transparent;
+  }
+
+  .triangular-backgraund--down {
+    height: 67px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-size: 660px 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .triangular-backgraund {
+    margin: 0 auto;
+    margin-bottom: 55px;
+    width: 1200px;
+    height: 94px;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: 1200px 94px;
+    text-align: center;
+    background-position: right top;
+  }
+
+  .triangular-backgraund--down {
+    margin: 0 auto;
+    height: 110px;
+    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-size: 1200px 110px;
+    background-position: center top;
+  }
+}
