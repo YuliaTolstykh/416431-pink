@@ -11,8 +11,11 @@
         <div class="page-wrapper__main-nav">
           <nav class="main-nav">
             <div class="main-nav__part">
-              <a class="main-nav__logo" href="index.html">PINK</a>
-              <button class="main-nav__toggle" type="button">X Окрыть меню</button>
+              <a class="main-nav__logo" href="index.html">
+                <img class="main-nav__logo-toggle" src="img/logo-pink-white-mobile.svg" alt="Логотип" width="80" height="40">
+                <img class="main-nav__logo-glasses-toggle" src="img/logo-pink-white-tablet.svg" alt="Логотип" width="147" height="40">
+              </a>
+              <button class="main-nav__toggle" type="button"></button>
             </div>
             <div class="main-nav__wrapper">
               <ul class="main-nav__list site-list">
@@ -36,9 +39,9 @@
           <p class="page-header__text page-header__text--inner">Конкурс на самое безбашенное путешествие с Пинк</p>
         </div>
       </header>
-      <main class="page-main">
+      <main class="page-main page-main--form">
         <p class="page-main__text">
-          Поделитесь своей историей и получите шанс выиграть ценный приз &#8211; 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span>
+          Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на вашу бонусную карту! <span class="page-main__hide">Пожалуйста, заполните форму ниже:</span>
         </p>
         <form class="page-main__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form form--person">
@@ -114,11 +117,11 @@
           </fieldset>
           <fieldset class="form form--emotion">
             <legend class="form__headline">Опишите свои эмоции</legend>
-            <textarea class="form__text form__text--area">Можно прямо в красках, не стесняясь в выражениях</textarea>
+            <textarea class="form__text form__text--area">Можно прям в красках, не стесняясь в выражениях</textarea>
           </fieldset>
           <div class="form__submit">
             <button class="form__button button-square" type="submit">Отправить форму</button>
-            <span class="form__footnote"><span>*</span> &#8211; обязательные поля</span>
+            <span class="form__footnote"><span>*</span> &#8212; обязательные <span class="page-main__hide"> для заполнения</span> поля</span>
           </div>
         </form>
         <div class="popup">
@@ -137,24 +140,24 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="index.html">
-            <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="100" height="30" alt="Приложение Пинк">
+            <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="150" height="40" alt="Приложение Пинк">
           </a>
           <div class="page-footer__social social">
             <ul class="social__list">
               <li class="social__item">
-                <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">Мы в Твиттере</a>
+                <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy" title="Мы в Твиттере"></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy" title="Мы в Фейсбуке"></a>
               </li>
               <li class="social__item">
-                <a class="social__link social__link--yuotube" href="https://www.youtube.com/user/htmlacademyru">Мы в YouTube</a>
+                <a class="social__link social__link--yuotube" href="https://www.youtube.com/user/htmlacademyru" title="Мы в YouTube"></a>
               </li>
             </ul>
           </div>
           <div class="page-footer__copyright copyright">
             <span class="copyright__text">Разработано:</span>
-            <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Разработано HTMLAcademy"></a>
           </div>
         </div>
       </footer>

@@ -12,22 +12,32 @@
 }
 
 .button--color {
+  margin-bottom: 15px;
+  width: 280px;
   color: @darkPink;
   background-color: @lightBackground;
   border-color: @darkPink;
 }
 
-.button--color:first-of-type {
-  margin-bottom: 15px;
+.button--cancel {
+  width: 280px;
+  color: #dddfe0;
+  background-color: @lightBackground;
+  border-color: #dddfe0;
 }
 
 @media (min-width: @tablet-width) {
   .button {
-    width: 300px;
+    width: 295px;
+  }
+
+  .button--color,
+  .button--cancel {
+    width: 260px;
   }
 
   .button--color {
-    width: 260px;
+    margin-bottom: 23px;
   }
 }
 
@@ -37,7 +47,8 @@
     font-size: 21px;
   }
 
-  .button--color {
+  .button--color,
+  .button--cancel {
     width: 185px;
     font-size: 18px;
   }

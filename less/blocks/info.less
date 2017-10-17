@@ -1,5 +1,6 @@
 .info {
   margin: 0;
+  padding-top: 41px;
   line-height: 1.2;
   text-align: center;
   color: rgb(40, 54, 69);
@@ -7,16 +8,21 @@
 
 .info__text {
   margin: 0;
-  margin-bottom: 32px;
-  font-size: 24pt;
+  margin-bottom: 30px;
+  font-size: 18pt;
   font-weight: lighter;
 }
 
+.info__text:last-of-type {
+  margin-bottom: 35px;
+}
+
 .info__wrapper {
-  padding-bottom: 285px;
+  padding-bottom: 291px;
+  padding-top: 40px;
 
   background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-position: center bottom -38px;
+  background-position: center bottom -42px;
   background-repeat: no-repeat;
   background-color: @lightBackground;
 }
@@ -29,18 +35,20 @@
 
 .info__slogan {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
+
   font-size: 18px;
-  line-height: @lineHeight;
+  line-height: 24pt;
   color: @black;
 }
 
 .info__sentence {
-  width: 95%;
   margin: auto;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
+  width: 82%;
 
-  line-height: @lineHeight;
+  line-height: 19pt;
+  letter-spacing: 0.02em;
 }
 
 .info__british {
@@ -48,24 +56,29 @@
 }
 
 @media (min-width: @tablet-width) {
+  .info {
+    padding-top: 50px;
+  }
+
   .info__text {
     font-size: 40px;
     margin: 0;
   }
 
   .info__text:last-of-type {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
   }
 
   .info__sentence {
     padding-left: 0;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     width: 95%;
+    letter-spacing: 0.02em;
   }
 
   .info__item:last-of-type .info__sentence {
-    margin: 0;
+    margin-bottom: 40px;
   }
 
   .info__list {
@@ -78,15 +91,17 @@
 
   .info__wrapper {
     padding: 0;
+    padding-top: 72px;
 
-    background-size: 275px auto;
-    background-position: 20px 0;
+    background-image: url("../img/iphone-screen-mobile@1x.png"), url("../img/bg-triangle-white.svg");
+    background-size: 269px auto, 660px 53px;
+    background-position: 20px 8px, left top;
   }
 
   .info__british {
     display: block;
 
-    padding-top: 100px;
+    padding-top: 97px;
     padding-bottom: 45px;
     padding-left: 50%;
     width: 50%;
@@ -98,26 +113,45 @@
   .info__slogan--big {
     font-size: 30px;
     line-height: 36px;
+    margin-bottom: 10px;
+  }
+
+  .info__sentence--british {
+    margin-bottom: 15px;
+    width: 90%;
+    letter-spacing: 0.02em;
+    line-height: 24px;
   }
 
   .info__link {
+    letter-spacing: 0.02em;
     color: @darkPink;
     text-decoration: underline;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .info {
+    padding-top: 67px;
+  }
+
   .info__wrapper {
     margin: 0 auto;
     padding: 0;
     width: 100%;
 
-    background: none;
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: 1200px 95px;
+    background-position: left top;
     background-color: @lightBackground;
   }
 
   .info__text {
     font-size: 50px;
+  }
+
+  .info__text:last-of-type {
+    margin-bottom: 78px;
   }
 
   .info__list {
@@ -130,9 +164,11 @@
   }
 
   .info__item {
-    padding-top: 360px;
-    flex-basis: 250px;
+    padding-top: 298px;
+    flex-basis: 26%;
+    line-height: inherit;
     text-align: center;
+    background-size: 186px auto;
   }
 
   .info__item:nth-child(1) {
@@ -156,21 +192,28 @@
   .info__slogan {
     display: block;
 
-    margin-bottom: 35px;
+    margin-bottom: 24px;
+    padding-top: 55px;
+    padding-left: 5px;
+    width: 95%;
     font-size: 30px;
+    background-color: @lightBackground;
   }
 
   .info__sentence {
     margin: 0;
+    width: 99%;
+    // padding-left: 6px;
     font-size: 18px;
+    line-height: 29px;
   }
 
   .info__british {
     box-sizing: border-box;
     margin: auto;
-    padding-top: 160px;
-    padding-bottom: 115px;
-    padding-left: 380px;
+    padding-top: 122px;
+    padding-bottom: 117px;
+    padding-left: 375px;
     width: @desktop-width;
 
     text-align: left;
@@ -179,7 +222,7 @@
 
   .info__sentence--british {
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 39px;
     width: 496px;
   }
 

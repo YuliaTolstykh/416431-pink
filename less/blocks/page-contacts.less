@@ -1,17 +1,24 @@
 .page-contacts {
+  padding-top: 81px;
   text-align: center;
 }
 
 .page-contacts__map {
   width: 320px;
-  height: 421px;
-  margin: 0;
-  padding: 0;
+  height: 206px;
+  background-image: url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: top left;
 }
 
 @media (min-width: @tablet-width) {
+  .page-contacts {
+    padding-top: 56px;
+  }
+
   .page-contacts__map {
     width: auto;
+    height: 377px;
   }
 }
 
@@ -19,5 +26,20 @@
   .page-contacts__wrapper {
     margin: 0 auto;
     width: @desktop-width;
+  }
+
+  .page-contacts {
+    padding-top: 80px;
+    margin-bottom: 52px;
+  }
+
+  .page-contacts__map {
+    margin: 0 auto;
+    width: 1200px;
+    height: 494px;
+    background-image: url("../img/bg-map-mobile@1x.png");
+    background-size: 1200px 500px;
+    background-repeat: no-repeat;
+    background-position: top left;
   }
 }

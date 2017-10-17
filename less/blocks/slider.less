@@ -1,3 +1,27 @@
-.slider {
+.slider__item:not(:first-child) {
+  display: none;
+}
+
+.slider__toggles {
+  margin-bottom: 0;
+}
+
+.slider__toggle {
+  padding: 0;
+  margin-left: 6px;
+  margin-right: 8px;
+  width: 0;
+  height: 0;
   background-color: @white;
+  border: 3px solid #bec2c7;
+  border-radius: 50%;
+}
+
+.slider__toggle--active {
+  padding: 3px;
+  width: 0;
+  height: 0;
+  background-color: @white;
+  border: 3px solid @fontColor;
+  border-radius: 50%;
 }

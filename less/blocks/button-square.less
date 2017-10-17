@@ -1,9 +1,10 @@
 .button-square {
   display: block;
-  width: 276px;
   margin: auto;
   padding-top: 15px;
   padding-bottom: 15px;
+  // box-sizing: border-box;
+  width: 276px;
 
   font-family: inherit;
   font-size: 18px;
@@ -15,4 +16,10 @@
   background-color: @green;
   border: 0;
   border-radius: 3px;
+}
+
+@media (min-width: @tablet-width) {
+  .button-square {
+    width: 300px;
+  }
 }

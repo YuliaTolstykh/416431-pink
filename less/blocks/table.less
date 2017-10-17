@@ -1,5 +1,5 @@
 .table {
-  margin-bottom: 40px;
+  margin-bottom: 28px;
   background: @white;
   border-collapse: collapse;
   transform: translateX(-50%);
@@ -16,7 +16,7 @@
   font-family: inherit;
   font-size: 18px;
   font-weight: bold;
-  line-height: @lineHeight;
+  line-height: 32px;
 }
 
 .table__header--light {
@@ -26,23 +26,24 @@
 
 .table__header-cell {
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 19px;
   border: 2px solid @borderColor;
   border-top: 0;
 }
 
 .table__cell {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 30px;
-  min-width: 250px;
+  padding-top: 18px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+  min-width: 255px;
   border: 2px solid @borderColor;
 }
 
 .table__item {
   font-size: 14px;
-  line-height: @lineHeight;
+  line-height: 28px;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .table__header-phantom,
@@ -58,6 +59,11 @@
 
   .table__header {
     font-size: 16px;
+    line-height: 26px;
+  }
+
+  .table__header-cell {
+    padding-bottom: 10px;
   }
 
   .table__header--light {
@@ -65,7 +71,11 @@
   }
 
   .table__cell {
-    min-width: 120px;
+    padding-top: 9px;
+    padding-bottom: 12px;
+    padding-left: 13px;
+    min-width: 138px;
+    letter-spacing: 0.02em;
   }
 
   .table__item {
@@ -89,11 +99,21 @@
 
 @media (min-width: @desktop-width) {
   .table__cell {
-    width: 239px;
+    padding-top: 14px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    width: 234px;
   }
 
   .table__header {
     font-size: 18px;
+    line-height: 30px;
+  }
+
+  .table__header-cell {
+    padding-top: 17px;
+    padding-bottom: 20px;
   }
 
   .table__header--light {
