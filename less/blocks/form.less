@@ -7,12 +7,13 @@
 }
 
 .form--person {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .form__title {
   display: block;
   margin-left: 24px;
+  margin-bottom: 3px;
 
   font-size: 14px;
   line-height: @lineHeight;
@@ -24,9 +25,9 @@
 .form__text {
   display: block;
   box-sizing: border-box;
-  margin-bottom: 21px;
-  padding-top: 18px;
-  padding-bottom: 12px;
+  margin-bottom: 18px;
+  padding-top: 16px;
+  padding-bottom: 14px;
   padding-left: 22px;
   padding-right: 20px;
   width: 100%;
@@ -82,7 +83,7 @@
 }
 
 .form--contact {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .form--emotion {
@@ -104,6 +105,11 @@
   text-align: center;
   color: @darkPink;
   background: @lightBackground;
+}
+
+.form--progress .form__headline,
+.form--software .form__headline {
+  padding-top: 38px;
 }
 
 .form__headline--contact {
@@ -137,6 +143,10 @@
 
 .form__button {
   margin-bottom: 37px;
+}
+
+.form__footnote-hide {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -345,7 +355,6 @@
   .form--contact .form__item {
     margin: 0 auto;
     width: 42%;
-    outline: 1px solid red;
   }
 
   .form--software {
@@ -399,6 +408,11 @@
   .form__footnote {
     display: inline-block;
     margin-right: 12px;
+  }
+
+  .form__footnote-hide {
+    display: inline;
+    color: @fontColor;
   }
 
   .form__button {
