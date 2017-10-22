@@ -4,11 +4,21 @@
 }
 
 .page-contacts__map {
+  position: relative;
+  margin: 0;
+  padding: 0;
   width: 320px;
   height: 206px;
-  background-image: url("../img/bg-map-mobile@1x.png");
-  background-repeat: no-repeat;
-  background-position: top left;
+  // background-image: url("../img/bg-map-mobile@1x.png");
+  // background-repeat: no-repeat;
+  // background-position: top left;
+  overflow: hidden;
+}
+
+.page-contacts__map-image {
+  display: block;
+  width: 320px;
+  height: auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -17,8 +27,13 @@
   }
 
   .page-contacts__map {
-    width: auto;
+    width: @tablet-width;
     height: 377px;
+  }
+
+  .page-contacts__map-image {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -35,11 +50,16 @@
 
   .page-contacts__map {
     margin: 0 auto;
-    width: 1200px;
+    width: auto;
     height: 494px;
-    background-image: url("../img/bg-map-mobile@1x.png");
-    background-size: 1200px 500px;
-    background-repeat: no-repeat;
-    background-position: top left;
+    // background-image: url("../img/bg-map-mobile@1x.png");
+    // background-size: 1200px 500px;
+    // background-repeat: no-repeat;
+    // background-position: top left;
+  }
+
+  .page-contacts__map-image {
+    width: 100%;
+    height: auto;
   }
 }

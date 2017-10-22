@@ -49,6 +49,16 @@
   color: @darkPink;
 }
 
+.contacts__phone:hover,
+.contacts__email:hover {
+  color: @fontColor;
+}
+
+.contacts__phone:active,
+.contacts__email:active {
+  color: @down;
+}
+
 @media (min-width: @tablet-width) {
   .contacts__list {
     display: flex;
@@ -85,7 +95,7 @@
 
 @media (min-width: @desktop-width) {
   .contacts__text-big {
-    margin-bottom: 33px;
+    margin-bottom: 30px;
     font-size: 50px;
   }
 

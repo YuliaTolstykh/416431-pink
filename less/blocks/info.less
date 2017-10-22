@@ -6,6 +6,10 @@
   color: rgb(40, 54, 69);
 }
 
+.info__clock-wrapper {
+  display: none;
+}
+
 .info__text {
   margin: 0;
   margin-bottom: 30px;
@@ -24,7 +28,12 @@
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-position: center bottom -42px;
   background-repeat: no-repeat;
+  background-size: 157px auto;
   background-color: @lightBackground;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-screen-mobile@2x.png");
+  }
 }
 
 .info__list {
@@ -93,9 +102,49 @@
     padding: 0;
     padding-top: 72px;
 
-    background-image: url("../img/iphone-screen-mobile@1x.png"), url("../img/bg-triangle-white.svg");
-    background-size: 269px auto, 660px 53px;
+    background-image: url("../img/iphone-screen-3-tablet@1x.png"), url("../img/bg-triangle-white.svg");
+    background-size: 268px auto, 660px 53px;
     background-position: 20px 8px, left top;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-3-tablet@2x.png")
+    }
+  }
+
+  .info__british-wrapper {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    background-color: @white;
+  }
+
+  .info__clock-wrapper {
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-top: 116px;
+    width: 50%;
+
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 240px auto;
+    background-position: bottom 14px left 20px;
+  }
+
+  .info__clock {
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+
+    font-size: 96px;
+    font-weight: bold;
+    line-height: 1.7;
+    vertical-align: middle;
+    color: @darkPink;
+
+    border: 13px solid @darkPink;
+    border-radius: 50%;
   }
 
   .info__british {
@@ -103,7 +152,8 @@
 
     padding-top: 97px;
     padding-bottom: 45px;
-    padding-left: 50%;
+    padding-left: 0;
+    box-sizing: border-box;
     width: 50%;
 
     text-align: left;
@@ -168,25 +218,39 @@
     flex-basis: 26%;
     line-height: inherit;
     text-align: center;
-    background-size: 186px auto;
+
+    background-repeat: no-repeat;
+    background-size: 292px auto;
   }
 
   .info__item:nth-child(1) {
-    background-image: url("../img/iphone-screen-mobile@1x.png");
-    background-position: top center;
+    background-image: url("../img/iphone-screen-1-desktop@1x.png");
+    background-position: top -4px right -21px;
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-1-desktop@2x.png");
+    }
   }
 
   .info__item:nth-child(2) {
-    background-image: url("../img/iphone-screen-mobile@1x.png");
-    background-position: top center;
+    background-image: url("../img/iphone-screen-2-desktop@1x.png");
+    background-position: top -4px right -24px;
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-2-desktop@2x.png");
+    }
   }
 
   .info__item:nth-child(3) {
-    background-image: url("../img/iphone-screen-mobile@1x.png");
-    background-position: top center;
+    background-image: url("../img/iphone-screen-3-desktop@1x.png");
+    background-position: top -4px right -24px;
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-screen-3-desktop@2x.png");
+    }
   }
 
   .info__slogan {
@@ -203,18 +267,48 @@
   .info__sentence {
     margin: 0;
     width: 99%;
-    // padding-left: 6px;
     font-size: 18px;
     line-height: 29px;
+  }
+
+  .info__british-wrapper {
+    margin: auto;
+    width: @desktop-width;
+    background-color: @lightBackground;
+  }
+
+  .info__clock-wrapper {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 31px;
+    padding-top: 98px;
+    width: 40%;
+
+    background-image: url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 300px auto;
+    background-position: bottom 67px left 9px;
+  }
+
+  .info__clock {
+    box-sizing: border-box;
+    width: 255px;
+    height: 255px;
+
+    font-size: 120px;
+    font-weight: bold;
+    line-height: 1.7;
+
+    border: 17px solid @darkPink;
+    border-radius: 60%;
   }
 
   .info__british {
     box-sizing: border-box;
     margin: auto;
-    padding-top: 122px;
+    padding-top: 124px;
     padding-bottom: 117px;
-    padding-left: 375px;
-    width: @desktop-width;
+    width: 62%;
 
     text-align: left;
     background-color: @lightBackground;
