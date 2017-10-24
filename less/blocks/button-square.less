@@ -3,7 +3,6 @@
   margin: auto;
   padding-top: 15px;
   padding-bottom: 15px;
-  // box-sizing: border-box;
   width: 276px;
 
   font-family: inherit;
@@ -16,6 +15,20 @@
   background-color: @green;
   border: 0;
   border-radius: 3px;
+}
+
+.button-square:hover {
+  background-color: #1c9b5e;
+}
+
+.button-square:active {
+  color: #61b98f;
+  background-color: #1c9b5e;
+  outline: none;
+}
+
+.button-square:disabled {
+  background-color: #e5e5e5;
 }
 
 @media (min-width: @tablet-width) {

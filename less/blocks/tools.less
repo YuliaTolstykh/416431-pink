@@ -5,10 +5,54 @@
   background-color: transparent;
 }
 
+.tools__wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tools__scale-crop::before {
+  content: " ";
+  position: absolute;
+  top: 88px;
+  left: -15px;
+
+  display: block;
+  width: 240px;
+  height: 2px;
+  background-color: @fontColor;
+}
+
+.tools__scale-crop::after {
+  content: " ";
+  position: absolute;
+  top: 82px;
+  right: -142px;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid @darkPink;
+  border-radius: 50%;
+  background-color: @white;
+}
+
+.tools__scale:active::after {
+  background-color: @darkPink;
+}
+
 .tools__crop {
   background-image: url("../img/icon-editor-crop.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.tools__crop:hover {
+  background-image: url("../img/icon-editor-crop-hover.svg");
+}
+
+.tools__crop:active {
+  background-image: url("../img/icon-editor-crop-active.svg");
 }
 
 .tools__fill {
@@ -19,46 +63,157 @@
   background-position: center;
 }
 
+.tools__fill:hover {
+  background-image: url("../img/icon-editor-fill-hover.svg");
+}
+
+.tools__fill:active {
+  background-image: url("../img/icon-editor-fill-active.svg");
+}
+
 .tools__bright {
   background-image: url("../img/icon-editor-contrast.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.tools__scale-wrapper {
-  position: relative;
+.tools__bright:hover {
+  background-image: url("../img/icon-editor-contrast-hover.svg");
 }
 
-.tools__scale {
-  margin: auto;
-  margin-top: 27px;
-  width: 240px;
-  height: 2px;
-  background-color: @fontColor;
-}
-
-.tools__toggle {
-  position: absolute;
-  top: -6px;
-  right: 74px;
-  width: 10px;
-  height: 10px;
-  border: 2px solid @darkPink;
-  border-radius: 50%;
-  background-color: @white;
+.tools__bright:active {
+  background-image: url("../img/icon-editor-contrast-active.svg");
 }
 
 @media (min-width: @tablet-width) {
-  .tools__scale-wrapper {
-    height: 35px;
-    border-bottom: solid 2px #dddfe0;
-  }
-
-  .tools__hide {
-    display: none;
-  }
-
   .tools__fill {
     margin: 0;
+    background-size: 25px;
+  }
+
+  .tools button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+  }
+
+  .tools__crop {
+    background-size: 23px;
+  }
+
+  .tools__bright {
+    background-size: 17px;
+  }
+
+  .tools__wrapper {
+    position: relative;
+    padding-left: 9px;
+    width: 280px;
+    text-align: left;
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  .tools__wrapper--crop {
+    padding-bottom: 9px;
+  }
+
+  .tools__wrapper--fill {
+    padding-top: 19px;
+    padding-bottom: 7px;
+  }
+
+  .tools__wrapper--bright {
+    padding-top: 14px;
+    padding-bottom: 9px;
+  }
+
+  .tools__scale::before {
+    content: " ";
+    position: absolute;
+    top: 36px;
+    left: 67px;
+
+    display: block;
+    width: 202px;
+    height: 2px;
+    background-color: @fontColor;
+  }
+
+  .tools__scale::after {
+    content: " ";
+    position: absolute;
+    top: 30px;
+    right: 90px;
+
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    border: 2px solid @darkPink;
+    border-radius: 50%;
+    background-color: @white;
+  }
+
+  .tools__scale-crop::after {
+    top: 13px;
+    right: 61px;
+  }
+
+  .tools__scale-fill::after {
+    top: 30px;
+    left: 93px;
+  }
+
+  .tools__scale-bright::after {
+    top: 27px;
+    right: 111px;
+  }
+
+  .tools__scale-crop::before {
+    top: 19px;
+    right: 0;
+  }
+
+  .tools__scale-fill::before {
+    top: 36px;
+    right: 0;
+  }
+
+  .tools__scale-bright::before {
+    top: 33px;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tools__wrapper {
+    padding-left: 0;
+    width: 410px;
+  }
+
+  .tools__scale::before {
+    margin-left: 25px;
+    width: 285px;
+  }
+
+  .tools__crop,
+  .tools__fill,
+  .tools__bright {
+    background-size: auto;
+  }
+
+  .tools__scale-crop::after {
+    top: 13px;
+    right: 234px;
+  }
+
+  .tools__scale-fill::after {
+    top: 30px;
+    left: 338px;
+  }
+
+  .tools__scale-bright::after {
+    top: 27px;
+    right: 145px;
   }
 }

@@ -7,12 +7,13 @@
 }
 
 .form--person {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .form__title {
   display: block;
   margin-left: 24px;
+  margin-bottom: 3px;
 
   font-size: 14px;
   line-height: @lineHeight;
@@ -24,9 +25,9 @@
 .form__text {
   display: block;
   box-sizing: border-box;
-  margin-bottom: 21px;
-  padding-top: 18px;
-  padding-bottom: 12px;
+  margin-bottom: 18px;
+  padding-top: 16px;
+  padding-bottom: 14px;
   padding-left: 22px;
   padding-right: 20px;
   width: 100%;
@@ -37,21 +38,80 @@
   letter-spacing: 0.02em;
   color: @fontColor;
   border: 2px solid @borderColor;
+  border-radius: 2px;
+}
+
+input:hover {
+  border-color: @fontColor;
+  outline: none;
+}
+
+input:active,
+input:focus {
+  border-color: @darkPink;
+  outline: none;
 }
 
 .form__text--mark,
 .form__text--radio {
+  position: relative;
   margin-bottom: 0;
   padding-left: 90px;
   padding-right: 0;
   padding-top: 25px;
   padding-bottom: 27px;
   border: none;
+  cursor: pointer;
 }
 
 .form__text--radio {
   padding-top: 22px;
   padding-bottom: 23px;
+}
+
+.form__text--mark::before,
+.form__text--radio::before {
+  content: " ";
+  position: absolute;
+  top: 21px;
+  left: 20px;
+
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: 2px solid @borderColor;
+  background-color: @white;
+}
+
+.form__text--radio::before {
+  top: 18px;
+  border-radius: 50%;
+}
+
+.form__mark:checked + .form__text--mark::before {
+  background: url("../img/icon-mark.svg");
+  background-color: @white;
+  background-repeat: no-repeat;
+  background-position: 7px 9px;
+  background-size: 22px 16px;
+}
+
+.form__text--mark:hover::before,
+.form__text--radio:hover::before {
+  border-color: @fontColor;
+}
+
+.form__text--mark:active::before,
+.form__text--radio:active::before {
+  border-color: @darkPink;
+}
+
+.form__radio:checked + .form__text--radio::before {
+  background: url("../img/icon-radio.svg");
+  background-color: @white;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 35px 35px;
 }
 
 .form__mark,
@@ -68,6 +128,11 @@
   letter-spacing: initial;
 }
 
+textarea:focus {
+  border-color: @darkPink;
+  outline: none;
+}
+
 .form--progress,
 .form--software {
   margin-bottom: 32px;
@@ -82,7 +147,7 @@
 }
 
 .form--contact {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .form--emotion {
@@ -104,6 +169,11 @@
   text-align: center;
   color: @darkPink;
   background: @lightBackground;
+}
+
+.form--progress .form__headline,
+.form--software .form__headline {
+  padding-top: 38px;
 }
 
 .form__headline--contact {
@@ -139,6 +209,10 @@
   margin-bottom: 37px;
 }
 
+.form__footnote-hide {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .form {
     margin: 0;
@@ -163,6 +237,39 @@
     padding-left: 19px;
   }
 
+  .form__phone::after {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    left: 440px;
+
+    display: block;
+    width: 59px;
+    height: 59px;
+
+    background-color: @borderColor;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .form__email::after {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    left: 440px;
+
+    display: block;
+    width: 59px;
+    height: 59px;
+
+    background-color: @borderColor;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   .form__text--mark,
   .form__text--radio {
     padding: 0;
@@ -176,7 +283,18 @@
     padding-bottom: 45px;
   }
 
+  .form__text--radio::before {
+    top: -4px;
+    left: 38px;
+  }
+
+  .form__text--mark::before {
+    top: -4px;
+    left: 58px;
+  }
+
   .form__title {
+    position: relative;
     margin: 0;
     margin-right: 20px;
   }
@@ -192,6 +310,7 @@
 
   .form--software .form__headline {
     margin-bottom: 47px;
+    padding-top: 0;
   }
 
   .form__headline--contact {
@@ -247,6 +366,7 @@
 
   .form--progress .form__headline {
     margin-bottom: 48px;
+    padding-top: 0;
   }
 
   .form__item {
@@ -255,6 +375,7 @@
   }
 
   .form--contact .form__item {
+    position: relative;
     margin-bottom: 28px;
     flex-direction: column-reverse;
   }
@@ -307,6 +428,16 @@
     padding-left: 133px;
   }
 
+  .form__text--radio::before {
+    top: -2px;
+    left: 74px;
+  }
+
+  .form__text--mark::before {
+    top: -4px;
+    left: -60px;
+  }
+
   .form--software .form__headline {
     margin-bottom: 49px;
   }
@@ -345,7 +476,16 @@
   .form--contact .form__item {
     margin: 0 auto;
     width: 42%;
-    outline: 1px solid red;
+  }
+
+  .form__phone::after {
+    top: 2px;
+    left: 311px;
+  }
+
+  .form__email::after {
+    top: 2px;
+    left: 311px;
   }
 
   .form--software {
@@ -399,6 +539,11 @@
   .form__footnote {
     display: inline-block;
     margin-right: 12px;
+  }
+
+  .form__footnote-hide {
+    display: inline;
+    color: @fontColor;
   }
 
   .form__button {

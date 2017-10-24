@@ -3,10 +3,15 @@
 }
 
 .tariff__wrapper {
-  padding-top: 60px;
+  position: relative;
+  padding-top: 95px;
   padding-bottom: 8px;
 
   overflow: hidden;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 400px auto;
   background-color: @lightBackground;
 }
 
@@ -16,11 +21,15 @@
 
 @media (min-width: @tablet-width) {
   .tariff__wrapper {
-    margin: 0 20px;
-    padding-top: 31px;
+    margin: 0;
+    padding-top: 90px;
     padding-bottom: 67px;
-    width: auto;
+    width: 100%;
     overflow: inherit;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: 690px auto;
+    background-position: left top;
   }
 
   .tariff__toggles {
@@ -30,10 +39,13 @@
 
 @media (min-width: @desktop-width) {
   .tariff__wrapper {
-    padding-top: 0;
+    padding-top: 147px;
     padding-bottom: 95px;
-    margin-left: 12px;
-    margin-right: 16px;
+
+    background-image: url("../img/bg-triangle-white.svg");
+    background-size: 100% auto;
+    background-position: left top;
+    background-color: @lightBackground;
   }
 
   .tariff {

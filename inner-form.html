@@ -2,20 +2,30 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ПИНК</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div class="page-wrapper">
       <header class="page-header page-header--inner">
         <div class="page-wrapper__main-nav">
           <nav class="main-nav">
-            <div class="main-nav__part">
-              <a class="main-nav__logo" href="index.html">
-                <img class="main-nav__logo-toggle" src="img/logo-pink-white-mobile.svg" alt="Логотип" width="80" height="40">
-                <img class="main-nav__logo-glasses-toggle" src="img/logo-pink-white-tablet.svg" alt="Логотип" width="147" height="40">
+            <div class="main-nav__part main-nav__part--background">
+              <a class="main-nav__logo" href="index.html" title="Приложение Пинк">
+                <svg class="page-header__svg" width="146px" height="40px">
+                  <use class="page-header__word" xlink:href="img/sprite.svg#word"></use>
+                  <use class="page-header__glasses" xlink:href="img/sprite.svg#glasses"></use>
+                  <use class="page-header__glasses-stars" xlink:href="img/sprite.svg#glassesStars"></use>
+                  <use class="page-header__stars" xlink:href="img/sprite.svg#stars"></use>
+                </svg>
               </a>
-              <button class="main-nav__toggle" type="button"></button>
+              <button class="main-nav__open main-nav__block-none" type="button" title="Окрыть меню"></button>
+              <button class="main-nav__close" type="button" title="Закрыть меню"></button>
             </div>
             <div class="main-nav__wrapper">
               <ul class="main-nav__list site-list">
@@ -26,7 +36,7 @@
                   <a class="main-nav__link" href="inner-photo.html">Фотографии</a>
                 </li>
                 <li class="site-list__item site-list__item--active">
-                  <a class="main-nav__link">Конкурс</a>
+                  <a class="main-nav__link main-nav__link-active">Конкурс</a>
                 </li>
                 <li class="site-list__item">
                   <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
@@ -93,10 +103,12 @@
               <div class="form__item">
                 <label class="form__title" for="phone">Номер телефона</label>
                 <input class="form__text" type="tel" id="phone" name="phone" value="Номер, пожалуйста">
+                <div class="form__phone"></div>
               </div>
               <div class="form__item">
                 <label class="form__title" for="email">Адрес почты</label>
                 <input class="form__text" type="email" id="email" name="email" value="Введите почту*">
+                <div class="form__email"></div>
               </div>
             </div>
           </fieldset>
@@ -121,7 +133,7 @@
           </fieldset>
           <div class="form__submit">
             <button class="form__button button-square" type="submit">Отправить форму</button>
-            <span class="form__footnote"><span>*</span> &#8212; обязательные <span class="page-main__hide"> для заполнения</span> поля</span>
+            <span class="form__footnote"><span>*</span> &#8212; обязательные <span class="form__footnote-hide"> для заполнения</span> поля</span>
           </div>
         </form>
         <div class="popup">
@@ -139,8 +151,13 @@
       </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
-          <a class="page-footer__logo" href="index.html">
-            <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" width="150" height="40" alt="Приложение Пинк">
+          <a class="page-footer__logo" href="index.html" title="Приложение Пинк">
+            <svg class="page-footer__svg" width="146px" height="40px">
+              <use class="page-footer__glasses" xlink:href="img/sprite.svg#glasses"></use>
+              <use class="page-footer__word" xlink:href="img/sprite.svg#word"></use>
+              <use class="page-footer__glasses-stars" xlink:href="img/sprite.svg#glassesStars"></use>
+              <use class="page-footer__stars" xlink:href="img/sprite.svg#stars"></use>
+            </svg>
           </a>
           <div class="page-footer__social social">
             <ul class="social__list">
@@ -157,7 +174,11 @@
           </div>
           <div class="page-footer__copyright copyright">
             <span class="copyright__text">Разработано:</span>
-            <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Разработано HTMLAcademy"></a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Разработано HTMLAcademy">
+              <svg class="copyright__svg" width="27px" height="34px">
+                <use class="copyright__svg-htmlacademy" xlink:href="img/sprite.svg#htmlacademy"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </footer>
