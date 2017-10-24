@@ -10,7 +10,7 @@
   display: inline-block;
 }
 
-.tools__wrapper--crop::before {
+.tools__scale-crop::before {
   content: " ";
   position: absolute;
   top: 88px;
@@ -22,7 +22,7 @@
   background-color: @fontColor;
 }
 
-.tools__wrapper--crop::after {
+.tools__scale-crop::after {
   content: " ";
   position: absolute;
   top: 82px;
@@ -37,7 +37,7 @@
   background-color: @white;
 }
 
-.tools__wrapper:active::after {
+.tools__scale:active::after {
   background-color: @darkPink;
 }
 
@@ -127,7 +127,7 @@
     padding-bottom: 9px;
   }
 
-  .tools__wrapper::before {
+  .tools__scale::before {
     content: " ";
     position: absolute;
     top: 36px;
@@ -139,7 +139,7 @@
     background-color: @fontColor;
   }
 
-  .tools__wrapper::after {
+  .tools__scale::after {
     content: " ";
     position: absolute;
     top: 30px;
@@ -154,32 +154,32 @@
     background-color: @white;
   }
 
-  .tools__wrapper--crop::after {
+  .tools__scale-crop::after {
     top: 13px;
     right: 61px;
   }
 
-  .tools__wrapper--fill::after {
+  .tools__scale-fill::after {
     top: 30px;
     left: 93px;
   }
 
-  .tools__wrapper--bright::after {
+  .tools__scale-bright::after {
     top: 27px;
     right: 111px;
   }
 
-  .tools__wrapper--crop::before {
+  .tools__scale-crop::before {
     top: 19px;
     right: 0;
   }
 
-  .tools__wrapper--fill::before {
+  .tools__scale-fill::before {
     top: 36px;
     right: 0;
   }
 
-  .tools__wrapper--bright::before {
+  .tools__scale-bright::before {
     top: 33px;
     right: 0;
   }
@@ -191,7 +191,7 @@
     width: 410px;
   }
 
-  .tools__wrapper::before {
+  .tools__scale::before {
     margin-left: 25px;
     width: 285px;
   }
@@ -202,17 +202,17 @@
     background-size: auto;
   }
 
-  .tools__wrapper--crop::after {
+  .tools__scale-crop::after {
     top: 13px;
     right: 234px;
   }
 
-  .tools__wrapper--fill::after {
+  .tools__scale-fill::after {
     top: 30px;
     left: 338px;
   }
 
-  .tools__wrapper--bright::after {
+  .tools__scale-bright::after {
     top: 27px;
     right: 145px;
   }

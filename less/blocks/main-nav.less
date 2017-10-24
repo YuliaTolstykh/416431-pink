@@ -2,40 +2,17 @@
   margin: 0 auto;
 }
 
-.main-nav__logo-tablet,
-.main-nav__logo-desktop,
-.main-nav__logo-stars {
-  display: none;
-}
-
 .main-nav__logo {
   width: 70px;
   height: 41px;
   margin-left: -52px;
 }
 
-.main-nav__logo svg {
-  width: 146px;
-  height: 41px;
-}
-
-a:hover .main-nav__logo-mobile,
-a:hover .main-nav__logo-desktop,
-a:hover .main-nav__logo-tablet {
-  color: #d22856;
-}
-
-a:active .main-nav__logo-mobile,
-a:active .main-nav__logo-desktop,
-a:active .main-nav__logo-tablet {
-  color: #6c7682;
-}
-
 .main-nav__part {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding-top: 12px;
+  padding-top: 5px;
   padding-bottom: 24px;
   padding-left: 0;
   padding-right: 19px;
@@ -68,7 +45,7 @@ a:active .main-nav__logo-tablet {
   opacity: 0.7;
 }
 
-.main-nav__toggle {
+.main-nav__close {
   border: 0;
   width: 24px;
   height: 24px;
@@ -78,17 +55,13 @@ a:active .main-nav__logo-tablet {
   background-color: transparent;
 }
 
-.main-nav__toggle:hover {
+.main-nav__close:hover {
   background-image: url("../img/icon-menu-cross-hover.svg");
 }
 
-.main-nav__toggle:active {
+.main-nav__close:active {
   background-image: url("../img/icon-menu-cross-down.svg");
   outline: none;
-}
-
-.main-nav__part--hat {
-  background-color: rgba(29, 38, 49, 0.3);
 }
 
 .main-nav__open {
@@ -110,16 +83,21 @@ a:active .main-nav__logo-tablet {
   outline: none;
 }
 
-@media (min-width: @tablet-width) {
-  .main-nav__logo-tablet {
-    display: block;
-  }
+.main-nav__block-none {
+  display: none;
+}
 
+.main-nav__part--background {
+  background-color: rgba(29, 38, 49, 0.3);
+}
+
+@media (min-width: @tablet-width) {
   .main-nav__logo {
     margin-left: 0;
   }
 
   .main-nav__part {
+    padding-top: 27px;
     padding-bottom: 42px;
     padding-left: 20px;
   }
@@ -131,15 +109,6 @@ a:active .main-nav__logo-tablet {
     justify-content: space-around;
     padding-right: 21px;
     width: @desktop-width;
-  }
-
-  .main-nav__logo-tablet {
-    display: none;
-  }
-
-  .main-nav__logo-desktop,
-  .main-nav__logo-stars {
-    display: block;
   }
 
   .main-nav__wrapper {
@@ -159,13 +128,13 @@ a:active .main-nav__logo-tablet {
   }
 
   .main-nav__part {
-    padding-top: 21px;
+    padding-top: 27px;
     padding-bottom: 38px;
     box-shadow: none;
     padding-right: 50px;
   }
 
-  .main-nav__toggle,
+  .main-nav__close,
   .main-nav__open,
   .main-nav__part--hat {
     display: none;
@@ -175,7 +144,7 @@ a:active .main-nav__logo-tablet {
     color: @darkPink;
   }
 
-  .main-nav__link:active {
+  .main-nav__link:not(.main-nav__link-active):active {
     color: @menuDown;
   }
 }

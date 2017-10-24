@@ -23,16 +23,19 @@
 
 .info__wrapper {
   padding-bottom: 291px;
-  padding-top: 40px;
+  // padding-top: 40px;
+  padding-top: 75px;
 
-  background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-position: center bottom -42px;
+
+
+  background-image: url("../img/iphone-screen-mobile@1x.png"), url("../img/bg-triangle-white.svg");
+  background-position: center bottom -42px, left top;
   background-repeat: no-repeat;
-  background-size: 157px auto;
+  background-size: 157px auto, 320px auto;
   background-color: @lightBackground;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/iphone-screen-mobile@2x.png");
+    background-image: url("../img/iphone-screen-mobile@2x.png"), url("../img/bg-triangle-white.svg");
   }
 }
 
@@ -107,7 +110,7 @@
     background-position: 20px 8px, left top;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/iphone-screen-3-tablet@2x.png");
+      background-image: url("../img/iphone-screen-3-tablet@2x.png"), url("../img/bg-triangle-white.svg");
     }
   }
 
@@ -120,50 +123,25 @@
 
   .info__clock-wrapper {
     display: block;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding-left: 40px;
-    padding-top: 130px;
-    width: 330px;
+    margin-top: 61px;
+    margin-left: 20px;
+    padding-top: 69px;
+    width: 240px;
+
+    background-image: url("../img/icon-editor-diagram-fill.svg"), url("../img/icon-timer.svg");
+    background-repeat: no-repeat;
+    background-size: 200px auto, 240px auto;
+    background-position: 21px 54px, 0 0;
   }
 
   .info__clock {
     position: relative;
-    z-index: 10;
-    box-sizing: border-box;
-    width: 200px;
-    height: 200px;
-
+    margin: auto;
     font-size: 96px;
     font-weight: bold;
     line-height: 1.7;
     vertical-align: middle;
     color: @darkPink;
-  }
-
-  .info__clock::before {
-    content: "";
-    position: absolute;
-    top: -70px;
-    right: -30px;
-    width: 250px;
-    height: 300px;
-
-    background-image: url("../img/icon-timer.svg");
-    background-repeat: no-repeat;
-    background-size: 240px auto;
-  }
-
-  .info__clock::after {
-    content: "";
-    position: absolute;
-    top: -14px;
-    right: 0;
-    box-sizing: border-box;
-    width: 200px;
-    height: 200px;
-    border: 13px solid @darkPink;
-    border-radius: 50%;
   }
 
   .info__british {
@@ -210,7 +188,7 @@
     width: 100%;
 
     background-image: url("../img/bg-triangle-white.svg");
-    background-size: 1200px 95px;
+    background-size: 100% auto;
     background-position: left top;
     background-color: @lightBackground;
   }
@@ -297,47 +275,19 @@
   }
 
   .info__clock-wrapper {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding-left: 31px;
-    padding-top: 116px;
-    width: 40%;
+    margin-top: 28px;
+    margin-left: 8px;
+    padding-top: 87px;
+    width: 31%;
+
+    background-size: 251px auto, 298px auto;
+    background-position: 24px 70px, 0 0;
   }
 
   .info__clock {
-    position: relative;
-    box-sizing: border-box;
-    width: 255px;
-    height: 255px;
-
     font-size: 120px;
     font-weight: bold;
     line-height: 1.7;
-  }
-
-  .info__clock::before {
-    content: "";
-    position: absolute;
-    top: -88px;
-    right: -23px;
-    width: 300px;
-    height: 350px;
-
-    background-image: url("../img/icon-timer.svg");
-    background-repeat: no-repeat;
-    background-size: 300px auto;
-  }
-
-  .info__clock::after {
-    content: "";
-    position: absolute;
-    top: -19px;
-    right: 0;
-    box-sizing: border-box;
-    width: 255px;
-    height: 255px;
-    border: 17px solid @darkPink;
-    border-radius: 50%;
   }
 
   .info__british {
@@ -345,7 +295,7 @@
     margin: auto;
     padding-top: 124px;
     padding-bottom: 117px;
-    width: 62%;
+    width: 54%;
 
     text-align: left;
     background-color: @lightBackground;
@@ -353,7 +303,7 @@
 
   .info__sentence--british {
     margin: 0;
-    margin-bottom: 39px;
+    margin-bottom: 37px;
     width: 496px;
   }
 
