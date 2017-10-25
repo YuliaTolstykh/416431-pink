@@ -1,12 +1,14 @@
 .popup {
   display: none;
-  // position: absolute;
+  position: absolute;
+  top: 41%;
   padding-top: 40px;
   padding-bottom: 40px;
   width: 320px;
 
   text-align: center;
   box-shadow: 0 7px 15px 1px #dbdbdb;
+  background-color: @white;
 }
 
 .popup__cap {
@@ -34,11 +36,14 @@
 }
 
 .popup--close {
+  top: 62%;
   padding-bottom: 0;
 }
 
 @media (min-width: @tablet-width) {
   .popup {
+    top: 18%;
+    left: 16%;
     margin: auto;
     width: 460px;
   }
@@ -56,10 +61,21 @@
     width: 300px;
     font-size: 18px;
   }
+
+  .popup--close {
+    top: 39%;
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .popup {
+    top: 28%;
+    left: 26%;
+  }
+
   .popup--close {
+    top: 58%;
+    left: 9%;
     padding-bottom: 0;
     width: 780px;
   }
