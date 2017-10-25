@@ -29,18 +29,18 @@
             </div>
             <div class="main-nav__wrapper">
               <ul class="main-nav__list site-list">
-                <li class="site-list__item">
-                  <a class="main-nav__link" href="index.html">Главная</a>
-                </li>
-                <li class="site-list__item">
-                  <a class="main-nav__link" href="inner-photo.html">Фотографии</a>
-                </li>
-                <li class="site-list__item site-list__item--active">
-                  <a class="main-nav__link main-nav__link-active">Конкурс</a>
-                </li>
-                <li class="site-list__item">
-                  <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
-                </li>
+                <a class="main-nav__link" href="index.html">
+                  <li class="site-list__item">Главная</li>
+                </a>
+                <a class="main-nav__link" href="inner-photo.html">
+                  <li class="site-list__item">Фотографии</li>
+                </a>
+                <a class="main-nav__link main-nav__link-active">
+                  <li class="site-list__item site-list__item--active">Конкурс</li>
+                </a>
+                <a class="main-nav__link" href="https://htmlacademy.ru/">
+                  <li class="site-list__item">HTML Academy</li>
+                </a>
               </ul>
             </div>
           </nav>
@@ -71,29 +71,35 @@
           <fieldset class="form form--progress">
             <legend class="form__headline">Ваши безбашенные достижения в путешествии</legend>
             <div class="form__list">
-              <div class="form__item">
-                <input class="form__mark" type="checkbox" id="shark" name="shark" checked>
-                <label class="form__text form__text--mark" for="shark"> Сделал селфи с акулой </label>
+              <div class="form__item-pair">
+                <div class="form__item">
+                  <input class="form__mark" type="checkbox" id="shark" name="shark" checked>
+                  <label class="form__text form__text--mark" for="shark"> Сделал селфи с акулой </label>
+                </div>
+                <div class="form__item">
+                  <input class="form__mark" type="checkbox" id="beach" name="beach" checked>
+                  <label class="form__text form__text--mark" for="beach"> Обгорел на пляже </label>
+                </div>
               </div>
-              <div class="form__item">
-                <input class="form__mark" type="checkbox" id="beach" name="beach" checked>
-                <label class="form__text form__text--mark" for="beach"> Обгорел на пляже </label>
+              <div class="form__item-pair">
+                <div class="form__item">
+                  <input class="form__mark" type="checkbox" id="Norris" name="Norris">
+                  <label class="form__text form__text--mark" for="Norris"> Видел Чака Норриса </label>
+                </div>
+                <div class="form__item">
+                  <input class="form__mark" type="checkbox" id="souvenir" name="souvenir">
+                  <label class="form__text form__text--mark" for="souvenir"> Накупил сувениров </label>
+                </div>
               </div>
-              <div class="form__item">
-                <input class="form__mark" type="checkbox" id="Norris" name="Norris">
-                <label class="form__text form__text--mark" for="Norris"> Видел Чака Норриса </label>
-              </div>
-              <div class="form__item">
-                <input class="form__mark" type="checkbox" id="souvenir" name="souvenir">
-                <label class="form__text form__text--mark" for="souvenir"> Накупил сувениров </label>
-              </div>
-              <div class="form__item">
-                <input class="form__mark" type="checkbox" id="tower" name="tower" checked>
-                <label class="form__text form__text--mark" for="tower"> Удержал башню </label>
-              </div>
-              <div class="form__item">
-                <input class="form__mark" type="checkbox" id="hotel" name="hotel">
-                <label class="form__text form__text--mark" for="hotel"> Разгромил отель </label>
+              <div class="form__item-pair">
+                <div class="form__item">
+                  <input class="form__mark" type="checkbox" id="tower" name="tower" checked>
+                  <label class="form__text form__text--mark" for="tower"> Удержал башню </label>
+                </div>
+                <div class="form__item">
+                  <input class="form__mark" type="checkbox" id="hotel" name="hotel">
+                  <label class="form__text form__text--mark" for="hotel"> Разгромил отель </label>
+                </div>
               </div>
             </div>
           </fieldset>
