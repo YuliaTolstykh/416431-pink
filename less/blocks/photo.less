@@ -199,6 +199,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo {
+    display: block;
+  }
+
   .photo__image {
     width: 300px;
     height: 400px;
@@ -207,6 +211,12 @@
   .photo__link {
     width: 300px;
     height: 400px;
+  }
+
+  .photo__wrapper {
+    padding-top: 23px;
+    padding-bottom: 12px;
+    text-align: left;
   }
 
   .photo__link--panorama {
@@ -227,7 +237,7 @@
   }
 
   .photo__wrapper--panorama {
-    padding: 25px 30px 23px 28px;
+    padding: 23px 30px 23px 28px;
     width: 940px;
     min-height: 93px;
   }
@@ -235,9 +245,6 @@
   .photo__wrapper--panorama .photo__text {
     width: 870px;
     text-align: left;
-  }
-
-  .photo__wrapper {
-    text-align: left;
+    letter-spacing: 0.01em;
   }
 }
