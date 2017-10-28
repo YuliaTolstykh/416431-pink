@@ -98,9 +98,31 @@
 //   background-color: rgba(29, 38, 49, 0.3);
 // }
 
+.main-nav__svg {
+  color: @white;
+}
+
+.main-nav__svg:hover {
+  color: @darkPink;
+}
+
+.main-nav__svg:active {
+  color: #6c7682;
+}
+
+.main-nav__glasses,
+.main-nav__glasses-stars,
+.main-nav__stars {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .main-nav__logo {
     margin-left: 0;
+  }
+
+  .main-nav__glasses {
+    display: block;
   }
 
   .main-nav__part {
@@ -115,6 +137,19 @@
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav__glasses {
+    display: none;
+  }
+
+  .main-nav__glasses-stars,
+  .main-nav__stars {
+    display: block;
+  }
+
+  .main-nav__stars {
+    color: @darkPink;
+  }
+
   .main-nav {
     display: flex;
     justify-content: space-around;
