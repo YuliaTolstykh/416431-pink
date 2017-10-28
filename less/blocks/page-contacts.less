@@ -1,14 +1,10 @@
 .page-contacts {
-  position: relative;
   padding-top: 81px;
-  padding-bottom: 173px;
   text-align: center;
 }
 
 .page-contacts__map-image {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
+  position: relative;
   margin: 0;
   padding: 0;
   width: 320px;
@@ -24,11 +20,14 @@
   }
 }
 
-.page-contacts__wrapper {
-  position: relative;
-  z-index: 10;
-  bottom: 0;
-  padding-bottom: 32px;
+.page-contacts__map-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+
+  width: 320px;
+  height: 32px;
   background-image: url("../img/bg-triangle-white-footer.svg");
   background-repeat: no-repeat;
   background-position: center bottom 0;
@@ -38,7 +37,6 @@
 @media (min-width: @tablet-width) {
   .page-contacts {
     padding-top: 56px;
-    padding-bottom: 310px;
   }
 
   .page-contacts__map-image {
@@ -56,25 +54,23 @@
     }
   }
 
-  .page-contacts__wrapper {
-    padding-bottom: 69px;
-    background-size: 660px auto;
+  .page-contacts__map-image::after {
+    width: 660px;
+    height: 70px;
+    background-size: 660px 70px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-contacts__wrapper {
-    margin: 0 auto;
-    padding-bottom: 116px;
+  .page-contacts__map-image::after {
     width: 100%;
-    background-position: center bottom 18px;
-    background-size: 100% 100px;
+    height: 115px;
+    background-size: 100% 115px;
   }
 
   .page-contacts {
     padding-top: 80px;
-    padding-bottom: 378px;
-    margin-bottom: 52px;
+    margin-bottom: 0;
   }
 
   .page-contacts__map-image {

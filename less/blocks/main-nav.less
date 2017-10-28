@@ -33,6 +33,8 @@
 }
 
 .main-nav__link {
+  display: block;
+  width: 320px;
   color: @white;
 }
 
@@ -46,50 +48,55 @@
 }
 
 .main-nav__close {
-  border: 0;
   width: 24px;
   height: 24px;
-
-  background-image: url("../img/icon-menu-cross.svg");
-  background-repeat: no-repeat;
   background-color: transparent;
+  border: 0;
+  outline: none;
 }
 
-.main-nav__close:hover {
-  background-image: url("../img/icon-menu-cross-hover.svg");
+.main-nav__menu-cross {
+  color: @white;
 }
 
-.main-nav__close:active {
-  background-image: url("../img/icon-menu-cross-down.svg");
+.main-nav__close:hover .main-nav__menu-cross {
+  color: rgba(210, 40, 86, 1);
+}
+
+.main-nav__close:active .main-nav__menu-cross {
+  color: rgba(210, 40, 86, 0.3);
   outline: none;
 }
 
 .main-nav__open {
-  border: 0;
   width: 50px;
   height: 24px;
-
-  background-image: url("../img/icon-menu-burger.svg");
-  background-repeat: no-repeat;
   background-color: transparent;
-}
-
-.main-nav__open:hover {
-  background-image: url("../img/icon-menu-burger-hover.svg");
-}
-
-.main-nav__open:active {
-  background-image: url("../img/icon-menu-burger-down.svg");
+  border: 0;
   outline: none;
 }
 
+.main-nav__menu-burger {
+  color: @white;
+}
+
+.main-nav__open:hover .main-nav__menu-burger{
+  color: rgba(210, 40, 86, 1);
+}
+
+.main-nav__open:active .main-nav__menu-burger{
+  color: rgba(210, 40, 86, 0.3);
+  outline: none;
+}
+
+// Стили для блока закрытого меню
 .main-nav__block-none {
   display: none;
 }
-
-.main-nav__part--background {
-  background-color: rgba(29, 38, 49, 0.3);
-}
+//
+// .main-nav__part--background {
+//   background-color: rgba(29, 38, 49, 0.3);
+// }
 
 @media (min-width: @tablet-width) {
   .main-nav__logo {
@@ -100,6 +107,10 @@
     padding-top: 27px;
     padding-bottom: 42px;
     padding-left: 20px;
+  }
+
+  .main-nav__link {
+    width: 660px;
   }
 }
 
@@ -140,6 +151,10 @@
   .main-nav__open,
   .main-nav__part--hat {
     display: none;
+  }
+
+  .main-nav__link {
+    display: inline;
   }
 
   .main-nav__link:hover {

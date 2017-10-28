@@ -54,29 +54,29 @@ input:focus {
 
 .form__text--mark,
 .form__text--radio {
-  position: relative;
-  margin-bottom: 0;
-  padding-left: 90px;
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 24px;
   padding-right: 0;
-  padding-top: 25px;
-  padding-bottom: 27px;
+  padding-top: 19px;
+  padding-bottom: 0;
+
   border: none;
   cursor: pointer;
 }
 
 .form__text--radio {
-  padding-top: 22px;
-  padding-bottom: 23px;
+  padding-top: 17px;
+  padding-bottom: 0;
+  margin-bottom: 19px;
 }
 
 .form__text--mark::before,
 .form__text--radio::before {
-  content: " ";
-  position: absolute;
-  top: 21px;
-  left: 20px;
+  content: "";
+  margin-right: 30px;
 
-  display: block;
   width: 35px;
   height: 35px;
   border: 2px solid @borderColor;
@@ -89,7 +89,7 @@ input:focus {
 }
 
 .form__mark:checked + .form__text--mark::before {
-  background: url("../img/icon-mark.svg");
+  background: url("../img/mark.svg");
   background-color: @white;
   background-repeat: no-repeat;
   background-position: 7px 9px;
@@ -107,7 +107,7 @@ input:focus {
 }
 
 .form__radio:checked + .form__text--radio::before {
-  background: url("../img/icon-radio.svg");
+  background: url("../img/radio.svg");
   background-color: @white;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -127,6 +127,7 @@ input:focus {
   height: 200px;
   font-weight: normal;
   letter-spacing: 0.02em;
+  resize: none;
 }
 
 textarea:focus {
@@ -157,11 +158,11 @@ textarea:focus {
 
 .form__headline {
   box-sizing: border-box;
+  margin: auto;
   margin-bottom: 18px;
   padding-top: 22px;
   padding-left: 50px;
   padding-right: 50px;
-  width: 100%;
 
   font-size: 14px;
   line-height: 18px;
@@ -191,29 +192,6 @@ textarea:focus {
   background-color: inherit;
 }
 
-.form__submit {
-  margin-bottom: 3px;
-  text-align: center;
-}
-
-.form__footnote {
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  line-height: @lineHeight;
-}
-
-.form__footnote span:first-of-type {
-  color: @darkPink;
-}
-
-.form__button {
-  margin-bottom: 37px;
-}
-
-.form__footnote-hide {
-  display: none;
-}
-
 @media (min-width: @tablet-width) {
   .form {
     margin: 0;
@@ -236,62 +214,61 @@ textarea:focus {
     padding-top: 14px;
     padding-bottom: 15px;
     padding-left: 19px;
+    background-color: transparent;
   }
 
-  .form__phone::after {
-    content: " ";
+  .form__item--phone::after {
+    content: "";
     position: absolute;
     top: 2px;
-    left: 440px;
+    right: 2px;
+    z-index: -1;
 
     display: block;
     width: 59px;
     height: 59px;
 
     background-color: @borderColor;
-    background-image: url("../img/icon-phone.svg");
+    background-image: url("../img/phone.svg");
     background-repeat: no-repeat;
     background-position: center;
-    overflow: hidden;
   }
 
-  .form__email::after {
-    content: " ";
+  .form__item--email::after {
+    content: "";
     position: absolute;
     top: 2px;
-    left: 440px;
+    right: 2px;
+    z-index: -1;
 
     display: block;
     width: 59px;
     height: 59px;
 
     background-color: @borderColor;
-    background-image: url("../img/icon-mail.svg");
+    background-image: url("../img/mail.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  .form__text--mark,
-  .form__text--radio {
+  .form__text--mark {
+    margin-bottom: 43px;
     padding: 0;
-    padding-left: 118px;
+    padding-left: 59px;
   }
 
   .form__text--radio {
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-left: 98px;
-    padding-bottom: 45px;
+    margin-bottom: 36px;
+    padding: 0;
+    padding-left: 39px;
   }
 
   .form__text--radio::before {
-    top: -4px;
-    left: 38px;
+    margin-right: 20px;
   }
 
   .form__text--mark::before {
-    top: -4px;
-    left: 58px;
+    margin-right: 20px;
   }
 
   .form__title {
@@ -305,12 +282,12 @@ textarea:focus {
     padding: 0;
     padding-left: 20px;
     padding-right: 20px;
-    width: auto;
     background: inherit;
   }
 
-  .form--software .form__headline {
-    margin-bottom: 47px;
+  .form--software .form__headline,
+  .form--progress .form__headline {
+    margin-bottom: 43px;
     padding-top: 0;
   }
 
@@ -329,7 +306,7 @@ textarea:focus {
   .form--software {
     margin: 0 20px;
     margin-bottom: 57px;
-    padding-bottom: 14px;
+    padding-bottom: 18px;
     background: inherit;
     order: 2;
   }
@@ -342,32 +319,13 @@ textarea:focus {
     order: 5;
   }
 
-  .form__submit {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    padding-left: @paddingLeft;
-    padding-right: @paddingLeft;
-    order: 6;
-  }
-
-  .form__button {
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: auto;
-  }
-
   .form--progress {
     margin: 0 20px;
     margin-bottom: 54px;
     padding: 0;
+    padding-bottom: 5px;
     background: inherit;
     order: 4;
-  }
-
-  .form--progress .form__headline {
-    margin-bottom: 48px;
-    padding-top: 0;
   }
 
   .form__item {
@@ -388,6 +346,8 @@ textarea:focus {
   .form--contact .form__text {
     margin-bottom: 10px;
     padding-right: 60px;
+    box-sizing: border-box;
+    height: 63px;
   }
 
   .form--emotion .form__headline {
@@ -425,22 +385,19 @@ textarea:focus {
     padding-left: 16px;
   }
 
+  .form__text--mark {
+    margin-bottom: 43px;
+    padding: 0;
+  }
+
   .form__text--radio {
-    padding-left: 133px;
-  }
-
-  .form__text--radio::before {
-    top: -2px;
-    left: 74px;
-  }
-
-  .form__text--mark::before {
-    top: -4px;
-    left: -60px;
+    margin-bottom: 35px;
+    padding: 0;
+    padding-left: 75px;
   }
 
   .form--software .form__headline {
-    margin-bottom: 49px;
+    margin-bottom: 46px;
   }
 
   .form--person {
@@ -456,7 +413,7 @@ textarea:focus {
 
   .form--progress {
     margin: 0 10px;
-    margin-bottom: 58px;
+    margin-bottom: 56px;
     width: 100%;
   }
 
@@ -479,14 +436,12 @@ textarea:focus {
     width: 42%;
   }
 
-  .form__phone::after {
-    top: 2px;
-    left: 313px;
+  .form__item--phone::after {
+    margin-left: auto;
   }
 
-  .form__email::after {
-    top: 2px;
-    left: 313px;
+  .form__item--email::after {
+    margin-left: auto;
   }
 
   .form--software {
@@ -495,7 +450,7 @@ textarea:focus {
     padding: 0;
     margin-right: 9px;
     margin-left: 24px;
-    padding-bottom: 14px;
+    padding-bottom: 20px;
     width: 433px;
   }
 
@@ -507,10 +462,12 @@ textarea:focus {
 
   .form--progress .form__list {
     flex-direction: row;
-    justify-content: space-around;
-    margin-left: 60px;
+    justify-content: space-between;
+
     padding: 0;
     padding-bottom: 10px;
+    padding-left: 59px;
+    padding-right: 60px;
   }
 
   .form--progress .form__item {
@@ -532,26 +489,5 @@ textarea:focus {
 
   .form__text--area {
     height: 127px;
-  }
-
-  .form__submit {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
-  }
-
-  .form__footnote {
-    display: inline-block;
-    margin-right: 12px;
-  }
-
-  .form__footnote-hide {
-    display: inline;
-    color: @fontColor;
-  }
-
-  .form__button {
-    margin-bottom: 0;
-    margin-left: 9px;
   }
 }

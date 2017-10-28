@@ -88,7 +88,7 @@
   width: 27px;
   height: 27px;
 
-  background-image: url("../img/icon-no.svg");
+  background-image: url("../img/no.svg");
   background-repeat: no-repeat;
 }
 
@@ -102,7 +102,7 @@
   width: 30px;
   height: 27px;
 
-  background-image: url("../img/icon-yes.svg");
+  background-image: url("../img/yes.svg");
   background-repeat: no-repeat;
 }
 
@@ -189,11 +189,12 @@
 
 @media (min-width: @desktop-width) {
   .table__cell {
-    padding-top: 14px;
-    padding-bottom: 20px;
+    padding-top: 11px;
+    padding-bottom: 18px;
     padding-left: 20px;
     box-sizing: border-box;
     width: 234px;
+    line-height: 30px;
   }
 
   .table__header {
@@ -203,7 +204,7 @@
 
   .table__header-cell {
     padding-top: 17px;
-    padding-bottom: 20px;
+    padding-bottom: 21px;
   }
 
   .table__header-cell:nth-of-type(3)::before {
@@ -231,6 +232,7 @@
 
   .table__cell--phantom {
     font-size: 18px;
+    line-height: 30px;
   }
 
   .table__item-no::after {
