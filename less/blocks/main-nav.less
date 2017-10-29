@@ -15,7 +15,7 @@
   padding-top: 5px;
   padding-bottom: 24px;
   padding-left: 0;
-  padding-right: 19px;
+  padding-right: 25px;
   box-shadow:
     0 -2px 0 0 @black,
     0 2px 0 0 #485461;
@@ -89,14 +89,13 @@
   outline: none;
 }
 
-// Стили для блока закрытого меню
-.main-nav__block-none {
+.main-nav__js {
   display: none;
 }
-//
-// .main-nav__part--background {
-//   background-color: rgba(29, 38, 49, 0.3);
-// }
+
+.main-nav__part--background-js {
+  // background-color: rgba(29, 38, 49, 0.3);
+}
 
 .main-nav__svg {
   color: @white;
@@ -167,6 +166,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     flex-shrink: 0;
+    margin-left: auto;
 
     font-weight: inherit;
     text-transform: none;
@@ -190,6 +190,11 @@
 
   .main-nav__link {
     display: inline;
+  }
+
+  .main-nav__link-active {
+    padding-bottom: 6px;
+    border-bottom: 2px solid @white;
   }
 
   .main-nav__link:hover {

@@ -18,43 +18,40 @@
       <header class="page-header page-header--inner">
         <div class="page-wrapper__main-nav">
           <nav class="main-nav">
-            <div class="main-nav__part">
+            <div class="main-nav__part main-nav__part--background-js">
               <a class="main-nav__logo" href="#" title="Приложение Пинк">
-                <svg class="main-nav__svg" width="146px" height="40px">
+                <svg class="main-nav__svg" width="146" height="40">
                   <use class="main-nav__word" xlink:href="#word"></use>
                   <use class="main-nav__glasses" xlink:href="#glasses"></use>
                   <use class="main-nav__glasses-stars" xlink:href="#glassesStars"></use>
                   <use class="main-nav__stars" xlink:href="#Stars"></use>
                 </svg>
               </a>
-              <button class="main-nav__open main-nav__block-none" type="button" title="Окрыть меню">
-                <svg class="main-nav__burger__svg" width="50px" height="24px">
+              <button class="main-nav__open main-nav__js" type="button" title="Окрыть меню">
+                <svg class="main-nav__burger__svg" width="50" height="24">
                   <use class="main-nav__menu-burger" xlink:href="#spr-menu-burger"></use>
                 </svg>
               </button>
               <button class="main-nav__close" type="button" title="Закрыть меню">
-                <svg class="main-nav__close__svg" width="24px" height="24px">
+                <svg class="main-nav__close__svg" width="24" height="24">
                   <use class="main-nav__menu-cross" xlink:href="#spr-menu-cross"></use>
                 </svg>
               </button>
             </div>
-            <div class="main-nav__wrapper">
-              <ul class="main-nav__list site-list">
-                <li class="site-list__item">
-                  <a class="main-nav__link" href="index.html">Главная</a>
-                </li>
-                <li class="site-list__item">
-                  <a class="main-nav__link" href="inner-photo.html">Фотографии</a>
-                </li>
-                <li class="site-list__item site-list__item--active">
-                  <a class="main-nav__link main-nav__link-active">Конкурс</a>
-                </li>
-                <li class="site-list__item">
-                  <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-                </li>
-              </ul>
-              </ul>
-            </div>
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="main-nav__link" href="index.html">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="main-nav__link" href="inner-photo.html">Фотографии</a>
+              </li>
+              <li class="site-list__item site-list__item--active">
+                <a class="main-nav__link main-nav__link-active">Конкурс</a>
+              </li>
+              <li class="site-list__item">
+                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
           </nav>
         </div>
         <div class="page-header__bottom page-header__bottom--inner">
@@ -62,7 +59,7 @@
         </div>
       </header>
       <main class="page-main page-main--form">
-        <p class="page-main__text page-main__text--form">Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на вашу бонусную карту!<span class="page-main__hide">Пожалуйста, заполните форму ниже:</span></p>
+        <p class="page-main__text page-main__text--form">Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на вашу бонусную карту! <span class="page-main__hide">Пожалуйста, заполните форму ниже:</span></p>
         <form class="page-main__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="form form--person">
             <div class="form__item">
@@ -79,7 +76,7 @@
             </div>
           </fieldset>
           <fieldset class="form form--progress">
-            <legend class="form__headline">Ваши безбашенные достижения в путешествии</legend>
+            <h2 class="form__headline">Ваши безбашенные достижения в путешествии</h2>
             <div class="form__list">
               <div class="form__item-pair">
                 <div class="form__item">
@@ -114,7 +111,7 @@
             </div>
           </fieldset>
           <fieldset class="form form--contact">
-            <legend class="form__headline form__headline--contact">Контактная информация</legend>
+            <h2 class="form__headline form__headline--contact">Контактная информация</h2>
             <div class="form__list">
               <div class="form__item form__item--phone">
                 <label class="form__title" for="phone">Номер телефона</label>
@@ -127,7 +124,7 @@
             </div>
           </fieldset>
           <fieldset class="form form--software">
-            <legend class="form__headline">С каким приложением путешествовали?</legend>
+            <h2 class="form__headline">С каким приложением путешествовали?</h2>
             <div class="form__item">
               <input class="form__radio" type="radio" id="apple" name="soft" checked>
               <label class="form__text form__text--radio" for="apple">Pink для iOS</label>
@@ -142,7 +139,7 @@
             </div>
           </fieldset>
           <fieldset class="form form--emotion">
-            <legend class="form__headline">Опишите свои эмоции</legend>
+            <h2 class="form__headline">Опишите свои эмоции</h2>
             <textarea class="form__text form__text--area">Можно прям в красках, не стесняясь в выражениях</textarea>
           </fieldset>
           <div class="form-submit">
@@ -168,7 +165,7 @@
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <a class="page-footer__logo" href="index.html" title="Приложение Пинк">
-            <svg class="page-footer__svg" width="146px" height="40px">
+            <svg class="page-footer__svg" width="146" height="40">
               <use class="page-footer__glasses" xlink:href="#spr-logo-pink-blue-mobile"></use>
               <use class="page-footer__glasses-stars" xlink:href="#spr-logo-pink-blue-desktop"></use>
             </svg>
@@ -189,7 +186,7 @@
           <div class="page-footer__copyright copyright">
             <span class="copyright__text">Разработано:</span>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" title="Разработано HTMLAcademy">
-              <svg class="copyright__svg" width="27px" height="34px">
+              <svg class="copyright__svg" width="27" height="34">
                 <use class="copyright__svg-htmlacademy" xlink:href="#spr-logo-htmlacademy"></use>
               </svg>
             </a>

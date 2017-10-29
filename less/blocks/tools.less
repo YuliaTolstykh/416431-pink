@@ -86,30 +86,31 @@
 }
 
 @media (min-width: @tablet-width) {
-  .tools__fill {
-    margin: 0;
-    background-image: url("../img/editor-fill.svg");
-    background-size: 25px;
-  }
-
   .tools button {
     position: relative;
     width: 40px;
     height: 40px;
   }
 
-  .tools__crop {
-    background-size: 23px;
+  .tools__fill,
+  .tools__fill:hover,
+  .tools__fill:active {
+    margin: 0;
+    background-image: url("../img/editor-fill-active.svg");
+    background-size: 25px;
   }
 
   .tools__crop,
   .tools__crop:hover,
   .tools__crop:active {
     background-image: url("../img/editor-crop-active.svg");
+    background-size: 23px;
   }
 
-  .tools__bright {
-    background-image: url("../img/editor-contrast.svg");
+  .tools__bright,
+  .tools__bright:hover,
+  .tools__bright:active {
+    background-image: url("../img/editor-contrast-active.svg");
     background-size: 17px;
   }
 
@@ -208,24 +209,18 @@
   .tools__fill:hover,
   .tools__fill:active {
     margin: 0;
-    background-image: url("../img/editor-fill-active.svg");
+    background-size: auto;
   }
 
   .tools__crop,
   .tools__crop:hover,
   .tools__crop:active {
-    background-image: url("../img/editor-crop-active.svg");
+    background-size: auto;
   }
 
   .tools__bright,
   .tools__bright:hover,
   .tools__bright:active {
-    background-image: url("../img/editor-contrast-active.svg");
-  }
-
-  .tools__crop,
-  .tools__fill,
-  .tools__bright {
     background-size: auto;
   }
 
