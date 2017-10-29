@@ -10,7 +10,7 @@
   display: inline-block;
 }
 
-.tools__scale-crop::before {
+.tools__scale--crop::before {
   content: " ";
   position: absolute;
   top: 88px;
@@ -22,7 +22,7 @@
   background-color: @fontColor;
 }
 
-.tools__scale-crop::after {
+.tools__scale--crop::after {
   content: " ";
   position: absolute;
   top: 82px;
@@ -42,69 +42,75 @@
 }
 
 .tools__crop {
-  background-image: url("../img/icon-editor-crop-active.svg");
+  background-image: url("../img/editor-crop-active.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .tools__crop:hover {
-  background-image: url("../img/icon-editor-crop-hover.svg");
+  background-image: url("../img/editor-crop-hover.svg");
 }
 
 .tools__crop:active {
-  background-image: url("../img/icon-editor-crop-active.svg");
+  background-image: url("../img/editor-crop-active.svg");
 }
 
 .tools__fill {
   margin-left: 25px;
   margin-right: 28px;
-  background-image: url("../img/icon-editor-fill.svg");
+  background-image: url("../img/editor-fill.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .tools__fill:hover {
-  background-image: url("../img/icon-editor-fill-hover.svg");
+  background-image: url("../img/editor-fill-hover.svg");
 }
 
 .tools__fill:active {
-  background-image: url("../img/icon-editor-fill-active.svg");
+  background-image: url("../img/editor-fill-active.svg");
 }
 
 .tools__bright {
-  background-image: url("../img/icon-editor-contrast.svg");
+  background-image: url("../img/editor-contrast.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .tools__bright:hover {
-  background-image: url("../img/icon-editor-contrast-hover.svg");
+  background-image: url("../img/editor-contrast-hover.svg");
 }
 
 .tools__bright:active {
-  background-image: url("../img/icon-editor-contrast-active.svg");
+  background-image: url("../img/editor-contrast-active.svg");
 }
 
 @media (min-width: @tablet-width) {
-  .tools__fill {
-    margin: 0;
-    background-image: url("../img/icon-editor-fill-active.svg");
-    background-size: 25px;
-  }
-
   .tools button {
     position: relative;
     width: 40px;
     height: 40px;
   }
 
-  .tools__crop {
-    background-image: url("../img/icon-editor-crop-active.svg");
+  .tools__fill,
+  .tools__fill:hover,
+  .tools__fill:active {
+    margin: 0;
+    background-image: url("../img/editor-fill-active.svg");
+    background-size: 25px;
+  }
+
+  .tools__crop,
+  .tools__crop:hover,
+  .tools__crop:active {
+    background-image: url("../img/editor-crop-active.svg");
     background-size: 23px;
   }
 
-  .tools__bright {
-    background-image: url("../img/icon-editor-contrast-active.svg");
+  .tools__bright,
+  .tools__bright:hover,
+  .tools__bright:active {
+    background-image: url("../img/editor-contrast-active.svg");
     background-size: 17px;
   }
 
@@ -131,7 +137,7 @@
   }
 
   .tools__scale::before {
-    content: " ";
+    content: "";
     position: absolute;
     top: 36px;
     left: 67px;
@@ -143,7 +149,7 @@
   }
 
   .tools__scale::after {
-    content: " ";
+    content: "";
     position: absolute;
     top: 30px;
     right: 90px;
@@ -157,32 +163,32 @@
     background-color: @white;
   }
 
-  .tools__scale-crop::after {
+  .tools__scale--crop::after {
     top: 13px;
     right: 61px;
   }
 
-  .tools__scale-fill::after {
+  .tools__scale--fill::after {
     top: 30px;
     left: 93px;
   }
 
-  .tools__scale-bright::after {
+  .tools__scale--bright::after {
     top: 27px;
     right: 111px;
   }
 
-  .tools__scale-crop::before {
+  .tools__scale--crop::before {
     top: 19px;
     right: 0;
   }
 
-  .tools__scale-fill::before {
+  .tools__scale--fill::before {
     top: 36px;
     right: 0;
   }
 
-  .tools__scale-bright::before {
+  .tools__scale--bright::before {
     top: 33px;
     right: 0;
   }
@@ -199,23 +205,36 @@
     width: 285px;
   }
 
-  .tools__crop,
   .tools__fill,
-  .tools__bright {
+  .tools__fill:hover,
+  .tools__fill:active {
+    margin: 0;
     background-size: auto;
   }
 
-  .tools__scale-crop::after {
+  .tools__crop,
+  .tools__crop:hover,
+  .tools__crop:active {
+    background-size: auto;
+  }
+
+  .tools__bright,
+  .tools__bright:hover,
+  .tools__bright:active {
+    background-size: auto;
+  }
+
+  .tools__scale--crop::after {
     top: 13px;
     right: 234px;
   }
 
-  .tools__scale-fill::after {
+  .tools__scale--fill::after {
     top: 30px;
     left: 338px;
   }
 
-  .tools__scale-bright::after {
+  .tools__scale--bright::after {
     top: 27px;
     right: 145px;
   }
