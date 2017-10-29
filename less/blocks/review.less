@@ -78,7 +78,7 @@
     position: relative;
     margin: 0 auto;
     padding-top: 165px;
-    padding-bottom: 16px;
+    padding-bottom: 40px;
     max-width: 960px;
     box-sizing: border-box;
 
@@ -118,58 +118,51 @@
     padding: 0;
   }
 
-  .review__button-right,
-  .review__button-left {
-    display: inline-block;
-    padding: 0;
-    width: 0;
-    border: 0;
+  .review__list {
+    position: relative;
   }
 
-  .review__button-right::after {
-    content: "";
+  .review__button-right,
+  .review__button-left {
     position: absolute;
-    bottom: 160px;
-    right: 10px;
+    bottom: 57%;
+    display: inline-block;
 
-    display: block;
+    padding: 0;
     width: 22px;
     height: 42px;
 
-    background-image: url("../img/review-arrow-right.svg");
     background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
   }
 
-  .review__button-right:hover::after {
+  .review__button-right {
+    right: 10px;
+    background-image: url("../img/review-arrow-right.svg");
+  }
+
+  .review__button-left {
+    left: 10px;
+    background-image: url("../img/review-arrow-left.svg");
+  }
+
+  .review__button-right:hover {
     background-image: url("../img/review-arrow-right-hover.svg");
     background-repeat: no-repeat;
   }
 
-  .review__button-right:active::after {
+  .review__button-right:active {
     background-image: url("../img/review-arrow-right-down.svg");
     background-repeat: no-repeat;
   }
 
-  .review__button-left::before {
-    content: "";
-    position: absolute;
-    bottom: 160px;
-    left: 10px;
-
-    display: block;
-    width: 22px;
-    height: 42px;
-
-    background-image: url("../img/review-arrow-left.svg");
-    background-repeat: no-repeat;
-  }
-
-  .review__button-left:hover::before {
+  .review__button-left:hover {
     background-image: url("../img/review-arrow-left-hover.svg");
     background-repeat: no-repeat;
   }
 
-  .review__button-left:active::before {
+  .review__button-left:active {
     background-image: url("../img/review-arrow-left-down.svg");
     background-repeat: no-repeat;
   }
