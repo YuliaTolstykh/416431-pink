@@ -72,9 +72,6 @@ gulp.task("webp", function () {
 
 gulp.task("sprite", function () {
   return gulp.src("img/spr-*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
 });
@@ -109,7 +106,6 @@ gulp.task("build", function (done) {
     "style",
     "minjs",
     "sprite",
-    "html",
     done
   );
 });

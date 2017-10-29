@@ -74,8 +74,8 @@ input:focus {
 
 .form__text--mark::before,
 .form__text--radio::before {
-  position: relative;
   content: "";
+  flex-shrink: 0;
   margin-right: 30px;
 
   width: 35px;
@@ -161,8 +161,8 @@ textarea:focus {
   margin: auto;
   margin-bottom: 18px;
   padding-top: 22px;
-  padding-left: 50px;
-  padding-right: 50px;
+  // padding-left: 10px;
+  // padding-right: 10px;
 
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -178,6 +178,7 @@ textarea:focus {
 .form--progress .form__headline,
 .form--software .form__headline {
   padding-top: 38px;
+  width: 240px;
 }
 
 .form__headline--contact {
